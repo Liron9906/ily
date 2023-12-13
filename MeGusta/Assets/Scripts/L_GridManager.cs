@@ -18,4 +18,5 @@ public class L_GridManager : MonoBehaviour
 			}
 		}
 	}
+
 }
