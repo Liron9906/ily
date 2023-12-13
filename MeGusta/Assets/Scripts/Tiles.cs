@@ -13,6 +13,11 @@ public class Tiles : MonoBehaviour
 		this.IsOccupied = false;
 		this.id = id;
 	}
+	public Tiles()
+	{
+		this.IsOccupied = false;
+		this.id = 0;
+	}
 	public bool GetIsOccupied() {  return this.IsOccupied; }
 
 	public int GetID() { return this.id; }
