@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class L_GridManager : MonoBehaviour
 {
-	[SerializeField] GameObject[] Tarr;
+	[SerializeField] GameObject[] tiles;
 	private void Start()
 	{
-		Tiles[] tiles = new Tiles[Tarr.Length];
-
-		for (int i = 0; i < Tarr.Length; i++)
+		L_PrefabScript[] Tarr= new L_PrefabScript[tiles.Length];
+		for (int i = 0; i < tiles.Length; i++)
 		{
-			for(int j = 0;j<=i;j++)
-			{
-				tiles[i]=new Tiles(Tarr[i],i,j);
-				Debug.Log(tiles[i].ToString());
-			}
+			Tarr[i]= new L_PrefabScript(i);
 		}
 	}
-
+	
 }
