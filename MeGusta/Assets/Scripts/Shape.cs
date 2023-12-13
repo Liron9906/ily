@@ -10,12 +10,13 @@ public class Shape : MonoBehaviour
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2(x, 0);   
     }
-	private void OnCollisionEnter2D(Collision2D collision)
-	{
+
+	//private void OnCollisionEnter2D(Collision2D collision)
+	//{
        
-        x = -x;
-		GetComponent<Rigidbody2D>().velocity = new Vector2(x, 0); 
-	}
+ //       x = -x;
+	//	GetComponent<Rigidbody2D>().velocity = new Vector2(x, 0); 
+	//}
 	// Update is called once per frame
 	void Update()
     {
