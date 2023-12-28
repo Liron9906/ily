@@ -1,25 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Shape : MonoBehaviour
 {
-    [SerializeField] int x=6;
+    [SerializeField] GameObject endObj;
+    [SerializeField] float moveSpeed;
+    Vector3 moveVector;
+    bool go= false;
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(x, 0);   
+        Vector3 endPos = new Vector3(endObj.transform.position.x, endObj.transform.position.y, endObj.transform.position.z);
+        moveVector = (endPos-transform.position).normalized * moveSpeed;
     }
-
-	//private void OnCollisionEnter2D(Collision2D collision)
-	//{
-       
- //       x = -x;
-	//	GetComponent<Rigidbody2D>().velocity = new Vector2(x, 0); 
-	//}
-	// Update is called once per frame
-	void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            go = true;
+        }
+        if (go)
+        {
+            if (FindObjectOfType<L_PrefabScript>().IsOnGrid==false)
+            {
+                {
+                    transform.position += moveVector * Time.deltaTime;
+                }
+            }
+        }
     }
 }
