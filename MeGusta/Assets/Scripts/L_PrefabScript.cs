@@ -42,6 +42,7 @@ public class L_PrefabScript : Tiles
 				//other.GetComponent<Transform>().position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1);
 				other.GetComponent<Transform>().position = new Vector3(this.transform.position.x,this.transform.position.y,this.transform.position.z-1);
 				other.GetComponent<Transform>().Translate(0, 0, 0);
+				other.GetComponent<SpriteRenderer>().sortingOrder = gameObject.GetComponent<SpriteRenderer>().sortingOrder;
 
 			}
 		}
