@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Shape : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class Shape : MonoBehaviour
             }
             else
             {
-                
+                FindObjectOfType<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
             }
         }
     }

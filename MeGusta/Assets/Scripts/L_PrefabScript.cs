@@ -18,7 +18,7 @@ public class L_PrefabScript : Tiles
 
     private void Update()
 	{
-		if (Input.GetButtonDown("Submit"))
+		if (Input.GetKeyDown(KeyCode.Space))
 		{
 			shapeoosh.layer = 0;
         }
