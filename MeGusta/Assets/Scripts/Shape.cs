@@ -34,6 +34,10 @@ public class Shape : MonoBehaviour
                     transform.position += moveVector * Time.deltaTime;
                 }
             }
+            else
+            {
+                
+            }
         }
     }
 }
