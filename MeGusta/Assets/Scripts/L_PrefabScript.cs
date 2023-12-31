@@ -20,7 +20,7 @@ public class L_PrefabScript : Tiles
 	{
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
-			shapeoosh.layer = 0;
+			shapeoosh.layer = 0; //com
         }
     }
 	private void OnTriggerEnter2D(Collider2D other)//locks throwable to prefab
