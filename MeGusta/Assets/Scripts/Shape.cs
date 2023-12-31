@@ -6,6 +6,7 @@ using UnityEngine.Rendering;
 
 public class Shape : MonoBehaviour
 {
+    public bool bopbopbopbopyesyesyesyes;
     [SerializeField] GameObject endObj;
     [SerializeField] float moveSpeed;
     Vector3 moveVector;
@@ -29,10 +30,11 @@ public class Shape : MonoBehaviour
         }
         if (go)
         {
-            if (FindObjectOfType<L_PrefabScript>().IsOnGrid==false)
+            if (bopbopbopbopyesyesyesyes==false)
             {
                 {
                     transform.position += moveVector * Time.deltaTime;
+                    Debug.Log("aniHOMO");
                 }
             }
             else
