@@ -8,14 +8,15 @@ public class Shape : MonoBehaviour
 {
     public bool bopbopbopbopyesyesyesyes;
     [SerializeField] GameObject endObj;
-    [SerializeField] float moveSpeed;
+    [SerializeField] float moveSpeed=5;
     Vector3 moveVector;
     bool go= false;
     // Start is called before the first frame update
     void Start()
     {
+        
         Vector3 endPos = new Vector3(endObj.transform.position.x, endObj.transform.position.y, endObj.transform.position.z);
-        moveVector = (endPos-transform.position).normalized * moveSpeed;
+        moveVector = (endPos-transform.position).normalized;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -32,15 +33,15 @@ public class Shape : MonoBehaviour
         {
             if (bopbopbopbopyesyesyesyes==false)
             {
-                {
-                    transform.position += moveVector * Time.deltaTime;
-                    Debug.Log("aniHOMO");
-                }
+               transform.position += moveVector *moveSpeed* Time.deltaTime;
+               Debug.Log("aniHOMO");
+                
             }
             else
             {
                 FindObjectOfType<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
             }
-        }
-    }
+			//go = false;
+		}
+	}
 }
