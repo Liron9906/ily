@@ -14,9 +14,9 @@ public class Shape : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        Vector3 endPos = new Vector3(endObj.transform.position.x, endObj.transform.position.y, endObj.transform.position.z);
-        moveVector = (endPos-transform.position).normalized;
+
+		Vector3 endPos = new Vector3(endObj.transform.position.x, endObj.transform.position.y, endObj.transform.position.z);
+		moveVector = (endPos-transform.position).normalized;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -25,7 +25,8 @@ public class Shape : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+		Vector3 endPos = new Vector3(endObj.transform.position.x, endObj.transform.position.y, endObj.transform.position.z);
+		if (Input.GetKeyDown(KeyCode.W))
         {
             go = true;
         }
