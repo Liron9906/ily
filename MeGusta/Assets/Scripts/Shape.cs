@@ -16,7 +16,6 @@ public class Shape : MonoBehaviour
     {
 
 		Vector3 endPos = new Vector3(endObj.transform.position.x, endObj.transform.position.y, endObj.transform.position.z);
-		moveVector = (endPos-transform.position).normalized;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -25,10 +24,11 @@ public class Shape : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		Vector3 endPos = new Vector3(endObj.transform.position.x, endObj.transform.position.y, endObj.transform.position.z);
+		//Vector3 endPos = new Vector3(endObj.transform.position.x, endObj.transform.position.y, endObj.transform.position.z);    
 		if (Input.GetKeyDown(KeyCode.W))
         {
-            go = true;
+			moveVector = (endObj.transform.position - transform.position).normalized;
+			go = true;
         }
         if (go)
         {

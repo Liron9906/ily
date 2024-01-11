@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Throwable
   - Used
+  - Background
   layers:
   - Default
   - TransparentFX
@@ -43,13 +44,13 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: 1
+  - name: Back
     uniqueID: 4204180279
     locked: 0
-  - name: 2
+  - name: Tiles
     uniqueID: 307314959
     locked: 0
-  - name: 3
+  - name: Player
     uniqueID: 4079686555
     locked: 0
   - name: 4
@@ -60,4 +61,7 @@ TagManager:
     locked: 0
   - name: 6
     uniqueID: 418657741
+    locked: 0
+  - name: New Layer 7
+    uniqueID: 190862323
     locked: 0
