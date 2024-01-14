@@ -35,7 +35,7 @@ public class Shape : MonoBehaviour
             if (bopbopbopbopyesyesyesyes==false)
             {
                transform.position += moveVector *moveSpeed* Time.deltaTime;
-               Debug.Log("aniHOMO");
+               Debug.Log("aniHOMO");    
                 
             }
             else

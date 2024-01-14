@@ -38,7 +38,8 @@ public class MovingGuy : MonoBehaviour
 		{
 			GetComponent<SpriteRenderer>().sortingLayerName = "Player";
 			//gameObject.layer = LayerMask.NameToLayer("Player");
-			Debug.Log(GetComponent<SpriteRenderer>().sortingLayerName);
+			Debug.Log(gameObject.layer);
+
 		}
 		else
 		{
