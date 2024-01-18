@@ -11,6 +11,7 @@ public class Shape : MonoBehaviour
     [SerializeField] float moveSpeed=5;
     Vector3 moveVector;
     bool go= false;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,7 @@ public class Shape : MonoBehaviour
     void Update()
     {
 		//Vector3 endPos = new Vector3(endObj.transform.position.x, endObj.transform.position.y, endObj.transform.position.z);    
-		if (Input.GetKeyDown(KeyCode.W))
+		if (Input.GetKeyDown(KeyCode.Mouse0))
         {
 			moveVector = (endObj.transform.position - transform.position).normalized;
 			go = true;

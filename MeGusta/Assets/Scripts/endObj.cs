@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class endObj : MonoBehaviour
@@ -14,5 +15,6 @@ public class endObj : MonoBehaviour
     void Update()
     {
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -9);
     }
 }
