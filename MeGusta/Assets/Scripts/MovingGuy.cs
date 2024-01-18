@@ -6,32 +6,40 @@ public class MovingGuy : MonoBehaviour
 {
 	[SerializeField] int PlayerSpeed = 5;
 	Vector3 Movement = new Vector3 (0, 0, 0);
+	[SerializeField] Sprite front;
+    [SerializeField] Sprite back;
+    [SerializeField] Sprite left;
+    [SerializeField] Sprite right;
 
-	private void Update()
+    private void Update()
 	{
 		
 		if (Input.GetKey(KeyCode.UpArrow))
 		{
 			Movement = new Vector2(0, PlayerSpeed);
 			transform.Translate(Movement*Time.deltaTime);
+			gameObject.GetComponent<SpriteRenderer>().sprite = back;
 		}
 		if (Input.GetKey(KeyCode.DownArrow))
 		{
 			Movement = new Vector2(0, -PlayerSpeed);
 			transform.Translate(Movement * Time.deltaTime);
-		}
-		if (Input.GetKey(KeyCode.LeftArrow))
+            gameObject.GetComponent<SpriteRenderer>().sprite = front;
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
 		{
 			Movement = new Vector2(-PlayerSpeed, 0);
 			transform.Translate(Movement * Time.deltaTime);
-		}
-		if (Input.GetKey(KeyCode.RightArrow))
+            gameObject.GetComponent<SpriteRenderer>().sprite = left;
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
 		{
 			Movement = new Vector2(PlayerSpeed, 0);
 			transform.Translate(Movement * Time.deltaTime);
-		}
-		
-	}
+            gameObject.GetComponent<SpriteRenderer>().sprite = right;
+        }
+
+    }
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.tag == "Used")
