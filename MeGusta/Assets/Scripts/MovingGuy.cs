@@ -42,7 +42,7 @@ public class MovingGuy : MonoBehaviour
     }
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.tag == "Used")
+		if (other.tag == "Used" || other.tag =="start" || other.tag == "end")
 		{
 			GetComponent<SpriteRenderer>().sortingLayerName = "Player";
 			//gameObject.layer = LayerMask.NameToLayer("Player");
@@ -54,7 +54,7 @@ public class MovingGuy : MonoBehaviour
 			GetComponent<SpriteRenderer>().sortingLayerName = "Background";
 			//gameObject.layer = LayerMask.NameToLayer("Background");
 			Debug.Log(gameObject.layer);
-
+			gameObject.GetComponent<Rigidbody2D>().gravityScale = 1; //hopefully put this where it makes bro fall when isn't on tile
 		}
 		//Debug.Log(gameObject.layer);
 		
