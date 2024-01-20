@@ -386,12 +386,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerSpeed: 5
-  front: {fileID: -387845252, guid: e4997a25685ef7f429ad624f0e4198e6, type: 3}
-  back: {fileID: 895150664, guid: e4997a25685ef7f429ad624f0e4198e6, type: 3}
-  left: {fileID: -54260045, guid: e4997a25685ef7f429ad624f0e4198e6, type: 3}
-  right: {fileID: 390770604, guid: e4997a25685ef7f429ad624f0e4198e6, type: 3}
-  falling: {fileID: 21300000, guid: 13a16976a12e7494988263e2e2bc3a5f, type: 3}
-  currentThrowable: {fileID: 1126034504}
+  front: {fileID: -181930744, guid: 1b103395ca61ec34aa844b106e8e5e34, type: 3}
+  back: {fileID: -1716665436, guid: 1b103395ca61ec34aa844b106e8e5e34, type: 3}
+  left: {fileID: -919555632, guid: 1b103395ca61ec34aa844b106e8e5e34, type: 3}
+  right: {fileID: 1186878535, guid: 1b103395ca61ec34aa844b106e8e5e34, type: 3}
+  falling: {fileID: 318331166, guid: 1b103395ca61ec34aa844b106e8e5e34, type: 3}
 --- !u!4 &214184777
 Transform:
   m_ObjectHideFlags: 0

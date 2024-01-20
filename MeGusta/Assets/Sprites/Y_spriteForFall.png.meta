@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e4997a25685ef7f429ad624f0e4198e6
+guid: 1b103395ca61ec34aa844b106e8e5e34
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,10 +119,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Y_character sprite_0
+      name: Y_spriteForFall_0
       rect:
         serializedVersion: 2
-        x: 706
+        x: 401
         y: 554
         width: 203
         height: 408
@@ -133,17 +133,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cdc1ccf66d682b458b85029fd99274a
-      internalID: -387845252
+      spriteID: 990797eaa564db440b303e7ffcda8172
+      internalID: -181930744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Y_character sprite_1
+      name: Y_spriteForFall_1
       rect:
         serializedVersion: 2
-        x: 990
+        x: 685
         y: 553
         width: 201
         height: 409
@@ -154,17 +154,38 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63eb0687d28fc8b418d5d6306b591423
-      internalID: 895150664
+      spriteID: 9b6f0c95c00cce542bbcfc3bf9f67e82
+      internalID: -1716665436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Y_character sprite_2
+      name: Y_spriteForFall_2
       rect:
         serializedVersion: 2
-        x: 700
+        x: 1142
+        y: 446
+        width: 422
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff085eba71a7db42afed3423a449f59
+      internalID: 318331166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Y_spriteForFall_3
+      rect:
+        serializedVersion: 2
+        x: 395
         y: 115
         width: 184
         height: 415
@@ -175,19 +196,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12e46912dd81da8469dd92e12c213e69
-      internalID: 390770604
+      spriteID: 473ba59559f636b4c81bfe7aa3be6110
+      internalID: 1186878535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Y_character sprite_3
+      name: Y_spriteForFall_4
       rect:
         serializedVersion: 2
-        x: 1015
+        x: 711
         y: 115
-        width: 185
+        width: 183
         height: 415
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -196,8 +217,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0df5ee762b869db478923f67a2cbef18
-      internalID: -54260045
+      spriteID: 1e2a213c1b69f0246999e0b0225b37f6
+      internalID: -919555632
       vertices: []
       indices: 
       edges: []
@@ -213,10 +234,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Y_character sprite_2: 390770604
-      Y_character sprite_1: 895150664
-      Y_character sprite_3: -54260045
-      Y_character sprite_0: -387845252
+      Y_spriteForFall_4: -919555632
+      Y_spriteForFall_1: -1716665436
+      Y_spriteForFall_0: -181930744
+      Y_spriteForFall_3: 1186878535
+      Y_spriteForFall_2: 318331166
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
