@@ -42,7 +42,7 @@ public class MovingGuy : MonoBehaviour
     }
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.tag == "Used" || other.tag =="start" || other.tag == "end")
+		if (other.tag == "Used" || other.tag =="start" || other.tag == "end")//diversified to 3 different tags in case we wanna mess with the usage of the "Used" tag
 		{
 			GetComponent<SpriteRenderer>().sortingLayerName = "Player";
 			//gameObject.layer = LayerMask.NameToLayer("Player");
@@ -54,7 +54,7 @@ public class MovingGuy : MonoBehaviour
 			GetComponent<SpriteRenderer>().sortingLayerName = "Background";
 			//gameObject.layer = LayerMask.NameToLayer("Background");
 			Debug.Log(gameObject.layer);
-			gameObject.GetComponent<Rigidbody2D>().gravityScale = 1; //hopefully put this where it makes bro fall when isn't on tile
+			gameObject.GetComponent<Rigidbody2D>().gravityScale = 1; //makes bro fall 
 		}
 		//Debug.Log(gameObject.layer);
 		
