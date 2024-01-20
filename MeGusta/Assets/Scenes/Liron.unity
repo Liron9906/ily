@@ -181,7 +181,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.2218182, y: 1.36}
+    oldSize: {x: 2.8714285, y: 5.8428574}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -229,9 +229,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -215280741
-  m_SortingLayer: 3
+  m_SortingLayer: 6
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 13a16976a12e7494988263e2e2bc3a5f, type: 3}
+  m_Sprite: {fileID: -1716665436, guid: 1b103395ca61ec34aa844b106e8e5e34, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -255,6 +255,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerSpeed: 5
+  front: {fileID: -181930744, guid: 1b103395ca61ec34aa844b106e8e5e34, type: 3}
+  back: {fileID: -1716665436, guid: 1b103395ca61ec34aa844b106e8e5e34, type: 3}
+  left: {fileID: -919555632, guid: 1b103395ca61ec34aa844b106e8e5e34, type: 3}
+  right: {fileID: 1186878535, guid: 1b103395ca61ec34aa844b106e8e5e34, type: 3}
+  falling: {fileID: 318331166, guid: 1b103395ca61ec34aa844b106e8e5e34, type: 3}
 --- !u!4 &145665647
 Transform:
   m_ObjectHideFlags: 0
@@ -1267,7 +1272,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 307314959
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: 7eb84b42bf7309641b4e7d545ca79552, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
