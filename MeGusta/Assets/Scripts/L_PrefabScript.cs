@@ -9,7 +9,7 @@ public class L_PrefabScript : Tiles
 {
 	[SerializeField] GameObject shapeoosh;
 	public bool IsOnGrid = false;
-	bool pressed = false;
+	public bool pressed = false;
 	public L_PrefabScript(int id) : base(id) { }
 
     private void Awake()

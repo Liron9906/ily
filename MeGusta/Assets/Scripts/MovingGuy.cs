@@ -10,52 +10,71 @@ public class MovingGuy : MonoBehaviour
     [SerializeField] Sprite back;
     [SerializeField] Sprite left;
     [SerializeField] Sprite right;
-
-    private void Update()
+	[SerializeField] Sprite falling;
+	bool isFall = false;
+	bool didClick = false;
+	private void Update()
 	{
-		
-		if (Input.GetKey(KeyCode.UpArrow))
-		{
-			Movement = new Vector2(0, PlayerSpeed);
-			transform.Translate(Movement*Time.deltaTime);
-			gameObject.GetComponent<SpriteRenderer>().sprite = back;
+		if (Input.GetKey(KeyCode.Mouse0))//see explanation below
+        {
+			didClick = true;
+        }
+        if (isFall == false)//locks movement when falling (visual shtick)
+        {
+			if (Input.GetKey(KeyCode.UpArrow))
+			{
+				Movement = new Vector2(0, PlayerSpeed);
+				transform.Translate(Movement * Time.deltaTime);
+				gameObject.GetComponent<SpriteRenderer>().sprite = back;
+			}
+			if (Input.GetKey(KeyCode.DownArrow))
+			{
+				Movement = new Vector2(0, -PlayerSpeed);
+				transform.Translate(Movement * Time.deltaTime);
+				gameObject.GetComponent<SpriteRenderer>().sprite = front;
+			}
+			if (Input.GetKey(KeyCode.LeftArrow))
+			{
+				Movement = new Vector2(-PlayerSpeed, 0);
+				transform.Translate(Movement * Time.deltaTime);
+				gameObject.GetComponent<SpriteRenderer>().sprite = left;
+			}
+			if (Input.GetKey(KeyCode.RightArrow))
+			{
+				Movement = new Vector2(PlayerSpeed, 0);
+				transform.Translate(Movement * Time.deltaTime);
+				gameObject.GetComponent<SpriteRenderer>().sprite = right;
+			}
 		}
-		if (Input.GetKey(KeyCode.DownArrow))
-		{
-			Movement = new Vector2(0, -PlayerSpeed);
-			transform.Translate(Movement * Time.deltaTime);
-            gameObject.GetComponent<SpriteRenderer>().sprite = front;
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-		{
-			Movement = new Vector2(-PlayerSpeed, 0);
-			transform.Translate(Movement * Time.deltaTime);
-            gameObject.GetComponent<SpriteRenderer>().sprite = left;
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-		{
-			Movement = new Vector2(PlayerSpeed, 0);
-			transform.Translate(Movement * Time.deltaTime);
-            gameObject.GetComponent<SpriteRenderer>().sprite = right;
-        }
-
     }
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.tag == "Used" || other.tag =="start" || other.tag == "end")//diversified to 3 different tags in case we wanna mess with the usage of the "Used" tag
+		if (other.tag == "Used" || other.tag =="start" || other.tag == "end" || other.tag == "UsedBackground")//diversified to 4 different tags in case we wanna mess with the usage of the "Used" tag
 		{
-			GetComponent<SpriteRenderer>().sortingLayerName = "Player";
-			//gameObject.layer = LayerMask.NameToLayer("Player");
-			Debug.Log(gameObject.layer);
-
+            if (gameObject.GetComponent<Renderer>().sortingLayerID != SortingLayer.NameToID("FALLING"))
+            {
+				gameObject.GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("Player");//working sorting layer change
+				//gameObject.layer = LayerMask.NameToLayer("Player");
+				Debug.Log(gameObject.layer);
+			}
 		}
 		else
 		{
-			GetComponent<SpriteRenderer>().sortingLayerName = "Background";
+            if (didClick)//this exists because of inconsistencies (of unclear origins) before and after the click causing gravity to go goofy
+            {
+				GetComponent<Rigidbody2D>().gravityScale = 25f; //makes bro fall 
+			}
+			else
+            {
+				GetComponent<Rigidbody2D>().gravityScale = 2f; //makes bro fall 
+			}
+			isFall = true;
+			gameObject.GetComponent<SpriteRenderer>().sprite = falling;
+			gameObject.GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("FALLING");//working sorting layer change
 			//gameObject.layer = LayerMask.NameToLayer("Background");
 			Debug.Log(gameObject.layer);
-			gameObject.GetComponent<Rigidbody2D>().gravityScale = 1; //makes bro fall 
-		}
+
+        }
 		//Debug.Log(gameObject.layer);
 		
 

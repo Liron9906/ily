@@ -21,7 +21,12 @@ public class Tiles : MonoBehaviour
 	public bool GetIsOccupied() {  return this.IsOccupied; }
 
 	public int GetID() { return this.id; }
-	public void SetIsOccupied() {  this.IsOccupied=!this.IsOccupied;Debug.Log(this.IsOccupied); }
+	public void SetIsOccupied() 
+	{  
+		this.IsOccupied=!this.IsOccupied;
+		Debug.Log(this.IsOccupied);
+		this.tag = "UsedBackground";
+	}
 	public override string ToString()
 	{
 		return $"My ID- ({this.GetID()})";
