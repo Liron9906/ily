@@ -5,7 +5,13 @@ using UnityEngine;
 
 public class Manager : MonoBehaviour
 {
-	
+	[SerializeField] GameObject Throwable;
+	public void SpawnNewOne()
+	{
+		
+
+		Instantiate(Throwable, new Vector3(-8, 0, 10), Quaternion.identity);
+	}
 }
 public class Throwable : MonoBehaviour
 {
@@ -33,7 +39,7 @@ public class Throwable : MonoBehaviour
 	{
 		if (this.facing == Dir.F)
 		{
-			//sprite.transform.right=
+			
 		}
 	}
 }

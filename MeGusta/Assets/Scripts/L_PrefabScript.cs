@@ -46,7 +46,7 @@ public class L_PrefabScript : Tiles
 				other.GetComponent<SpriteRenderer>().sortingOrder = gameObject.GetComponent<SpriteRenderer>().sortingOrder;
 				//Debug.Log((this.transform.position.x, this.transform.position.y, this.transform.position.z - 1));
 				other.GetComponent<Shape>().bopbopbopbopyesyesyesyes = true;
-				
+				FindObjectOfType<Manager>().SpawnNewOne();
 				//other.GetComponent<Transform>().position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1);
 				pressed = false;
 				
