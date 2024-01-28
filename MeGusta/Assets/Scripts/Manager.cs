@@ -9,8 +9,8 @@ public class Manager : MonoBehaviour
 	public void SpawnNewOne()
 	{
 		
-
-		Instantiate(Throwable, new Vector3(-8, 0, 10), Quaternion.identity);
+		GameObject ThrowableGO= 
+		Instantiate(Throwable, new Vector3(-8, 0, 10), Quaternion.identity) as GameObject;
 	}
 }
 public class Throwable : MonoBehaviour

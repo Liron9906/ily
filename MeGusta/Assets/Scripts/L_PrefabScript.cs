@@ -9,7 +9,7 @@ public class L_PrefabScript : Tiles
 {
 	[SerializeField] GameObject shapeoosh;
 	public bool IsOnGrid = false;
-	public bool pressed = false;
+	private bool pressed = false;
 	public L_PrefabScript(int id) : base(id) { }
 
     private void Awake()
@@ -19,13 +19,8 @@ public class L_PrefabScript : Tiles
 
     private void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Mouse1))
-		{
-			pressed = true;
-			
-			//shapeoosh.layer = 0; //com
-			
-		}
+		if(FindObjectOfType<Shape>().pressed==true) { pressed = true; }
+		if(FindObjectOfType<Shape>().pressed==false) { pressed = false; }
     }
 	private void OnTriggerEnter2D(Collider2D other)//locks throwable to prefab
 	{
