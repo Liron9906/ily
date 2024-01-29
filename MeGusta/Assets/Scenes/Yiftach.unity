@@ -1780,7 +1780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bopbopbopbopyesyesyesyes: 0
   endObj: {fileID: 1355750924}
-  moveSpeed: 5
+  moveSpeed: 7
   pressed: 0
 --- !u!50 &1126034507
 Rigidbody2D:
