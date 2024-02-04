@@ -26,7 +26,7 @@ public class Y_LeftUI : MonoBehaviour
         {
             selectorUI.value += 1;
         }
-        switch (selectorUI.value)
+        switch (selectorUI.value)   
         {
             case 1:
                 curTile = curTiles[0];
