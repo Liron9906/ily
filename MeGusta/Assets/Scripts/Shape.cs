@@ -71,14 +71,14 @@ public class Shape : MonoBehaviour
 	{
         if (other.tag == "Wall")
         {
-            
-        }
+			FindObjectOfType<Manager>().SpawnNewOne();
+			Destroy(gameObject);
+		}
 		if (other.tag == "Background" && pressed == true)
 		{
 			if (other.GetComponent<L_PrefabScript>().GetIsOccupied())
 			{
-				FindObjectOfType<Manager>().SpawnNewOne();
-                Destroy(gameObject);
+				
 
 			}
 			else//if false
