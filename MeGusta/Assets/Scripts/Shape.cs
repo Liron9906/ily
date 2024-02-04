@@ -37,6 +37,7 @@ public class Shape : MonoBehaviour
 	{
 		if (other.tag == "Background")
         {
+			firstColor= other.GetComponent<SpriteRenderer>().color;
 			other.GetComponent<SpriteRenderer>().color = Color.red;
 		}
 
@@ -79,7 +80,6 @@ public class Shape : MonoBehaviour
 			other.GetComponent<SpriteRenderer>().color = firstColor;
 		}
 	}
-
     private void InputButBetter()
     {
 		if (Input.GetKeyDown(KeyCode.R)) { GetComponent<Transform>().Rotate(new Vector3(0, 0, 90)); }
