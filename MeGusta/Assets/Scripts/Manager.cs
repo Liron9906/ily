@@ -11,6 +11,7 @@ public class Manager : MonoBehaviour
 		
 		GameObject ThrowableGO= 
 		Instantiate(Throwable, new Vector3(-8, 0, 10) , Quaternion.identity) as GameObject;
+		Throwable = ThrowableGO;
 	}
 }
 public class Throwable : MonoBehaviour
