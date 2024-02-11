@@ -23,7 +23,7 @@ public class Shape : MonoBehaviour
         this.tag = "Throwable";
         go = false;
         bopbopbopbopyesyesyesyes = false;
-		FindMousePos();
+		FindObjectOfType<Manager>().FindMousePos();
     }
 	
 	// Update is called once per frame
@@ -43,7 +43,7 @@ public class Shape : MonoBehaviour
 
 		if (other.tag == "Wall")
         {
-			FindObjectOfType<Manager>().SpawnNewOne();
+			//FindObjectOfType<Manager>().SpawnNewOne();
 			Destroy(gameObject);
 		}
         if (other.tag == "Background" && pressed == true)
@@ -103,10 +103,7 @@ public class Shape : MonoBehaviour
 			go = true;
 		}
 	}
-	private void FindMousePos()
-	{
-		Vector3 endPos = new Vector3(endObj.transform.position.x, endObj.transform.position.y, endObj.transform.position.z);
-	}
+
 	private void MovetoMouseDir()
 	{
 		if (go)

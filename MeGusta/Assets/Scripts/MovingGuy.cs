@@ -49,7 +49,7 @@ public class MovingGuy : MonoBehaviour
     }
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.tag == "Used" || other.tag =="start" || other.tag == "end" || other.tag == "UsedBackground")//diversified to 4 different tags in case we wanna mess with the usage of the "Used" tag
+		if (other.tag != "Background")//diversified to 4 different tags in case we wanna mess with the usage of the "Used" tag
 		{
             if (gameObject.GetComponent<Renderer>().sortingLayerID != SortingLayer.NameToID("FALLING"))
             {

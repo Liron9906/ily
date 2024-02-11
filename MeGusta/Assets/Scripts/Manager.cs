@@ -5,14 +5,28 @@ using UnityEngine;
 
 public class Manager : MonoBehaviour
 {
+	[SerializeField] GameObject endObj2;
 	[SerializeField] GameObject Throwable;
 	public void SpawnNewOne()
 	{
-		
-		GameObject ThrowableGO= 
-		Instantiate(Throwable, new Vector3(-8, 0, 10) , Quaternion.identity) as GameObject;
-		Throwable = ThrowableGO;
+		if (FindObjectOfType<endObj>().IsOnBorders)
+		{
+			GameObject ThrowableGO =
+			Instantiate(Throwable, FindMousePos(), Quaternion.identity) as GameObject;
+			Throwable = ThrowableGO;
+		}
+		else
+		{
+			GameObject ThrowableGO =
+			Instantiate(Throwable, new Vector3(-8,-1,10), Quaternion.identity) as GameObject;
+			Throwable = ThrowableGO;
+		}
 	}
+	public Vector3 FindMousePos()
+	{
+		Vector3 endPos = new Vector3(endObj2.transform.position.x, endObj2.transform.position.y, endObj2.transform.position.z);
+		return endPos;
+	}	
 }
 public class Throwable : MonoBehaviour
 {
