@@ -8,7 +8,7 @@ public class Y_LeftUI : MonoBehaviour
     [SerializeField] Slider selectorUI;
     //[SerializeField] Scrollbar selectorUI;
     [SerializeField] GameObject[] curTiles= new GameObject[4];
-    public GameObject curTile;
+    public static GameObject curTile;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +18,11 @@ public class Y_LeftUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonUp("Fire2"))
+        if (Input.GetKeyUp(KeyCode.O))
         {
             selectorUI.value -= 1;
         }
-        if (Input.GetButtonUp("Fire3"))
+        if (Input.GetKeyUp(KeyCode.L))
         {
             selectorUI.value += 1;
         }
