@@ -6,10 +6,11 @@ using UnityEngine;
 public class Manager : MonoBehaviour
 {
 	[SerializeField] GameObject endObj2;
-	[SerializeField] GameObject Throwable;
+	[SerializeField] public static GameObject Throwable;
     private void Update()
     {
-		Throwable = Y_LeftUI.curTile;
+		//Throwable = Y_LeftUI.curTile;
+		//Debug.Log(Throwable);
     }
     public void SpawnNewOne()
 	{

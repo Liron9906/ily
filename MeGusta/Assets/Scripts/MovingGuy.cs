@@ -55,7 +55,7 @@ public class MovingGuy : MonoBehaviour
             {
 				gameObject.GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("Player");//working sorting layer change
 				//gameObject.layer = LayerMask.NameToLayer("Player");
-				Debug.Log(gameObject.layer);
+				//Debug.Log(gameObject.layer);
 			}
 		}
 		else

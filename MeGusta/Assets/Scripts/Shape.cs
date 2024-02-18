@@ -82,7 +82,7 @@ public class Shape : MonoBehaviour
 	}
     private void InputButBetter()
     {
-		if (Input.GetKeyDown(KeyCode.R)) { GetComponent<Transform>().Rotate(new Vector3(0, 0, 90)); }
+		//if (Input.GetKeyDown(KeyCode.R)) { GetComponent<Transform>().Rotate(new Vector3(0, 0, 90)); }
 		if (Input.GetKeyDown(KeyCode.Mouse1))
 		{
 			//FindObjectOfType<L_PrefabScript>().pressed = true;
