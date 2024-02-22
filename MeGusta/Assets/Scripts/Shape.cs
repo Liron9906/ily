@@ -43,10 +43,11 @@ public class Shape : MonoBehaviour
 
 		if (other.tag == "Wall")
         {
-			FindObjectOfType<Manager>().SpawnNewOne();
 			Destroy(gameObject);
+			FindObjectOfType<Manager>().SpawnNewOne();
+
 		}
-        if (other.tag == "Background" && pressed == true)
+		if (other.tag == "Background" && pressed == true)
         {
 
 

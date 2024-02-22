@@ -12,22 +12,22 @@ public class endObj : MonoBehaviour
     {
         
     }
-	private void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.tag == "NIB")
-        {
-			Debug.Log("das");
-			IsOnBorders = true;
-        }
-	}
-	private void OnTriggerExit2D(Collider2D other)
-	{
-		if (other.tag == "NIB")
-		{
-			Debug.Log("das");
-			IsOnBorders = false;
-		}
-	}
+	////private void OnTriggerEnter2D(Collider2D other)
+	////{
+	////	if (other.tag == "NIB")
+ ////       {
+	////		Debug.Log("das");
+	////		IsOnBorders = true;
+ ////       }
+	////}
+	////private void OnTriggerExit2D(Collider2D other)
+	////{
+	////	if (other.tag == "NIB")
+	////	{
+	////		Debug.Log("das");
+	////		IsOnBorders = false;
+	////	}
+	////}
 	// Update is called once per frame
 	void Update()
     {
