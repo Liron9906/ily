@@ -14,7 +14,7 @@ public class Y_LeftUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Manager.Throwable = curTiles[0];
     }
     public void CurTileSwap()
     {
