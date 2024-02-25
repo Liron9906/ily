@@ -43,8 +43,9 @@ public class Shape : MonoBehaviour
 
 		if (other.tag == "Wall")
         {
-			Destroy(gameObject);
 			FindObjectOfType<Manager>().SpawnNewOne();
+			Destroy(gameObject);
+
 
 		}
 		if (other.tag == "Background" && pressed == true)
@@ -58,18 +59,18 @@ public class Shape : MonoBehaviour
             }
             else//if false
             {
-				IsOnGrid = true;
+				this.IsOnGrid = true;
                 other.GetComponent<L_PrefabScript>().SetIsOccupied();//sets it to true
                 this.tag = "Used";//changes the throwable tag to Used so it wont teleport like crazy between square(personal experience:)
-                GetComponent<Transform>().Translate(0, 0, 0);
-                GetComponent<Transform>().position = new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z - 1);
-                GetComponent<SpriteRenderer>().sortingOrder = other.GetComponent<SpriteRenderer>().sortingOrder;
+				FindObjectOfType<Manager>().SpawnNewOne();
+				this.GetComponent<Transform>().Translate(0, 0, 0);
+                this.GetComponent<Transform>().position = new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z - 1);
+                this.GetComponent<SpriteRenderer>().sortingOrder = other.GetComponent<SpriteRenderer>().sortingOrder;
                 //Debug.Log((this.transform.position.x, this.transform.position.y, this.transform.position.z - 1));
-                bopbopbopbopyesyesyesyes = true;
-                FindObjectOfType<Manager>().SpawnNewOne();
-                lClickCounter = 0;
+                this.bopbopbopbopyesyesyesyes = true;
+                this.lClickCounter = 0;
                 //other.GetComponent<Transform>().position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1);
-                pressed = false;
+                this.pressed = false;
 
             }
         }

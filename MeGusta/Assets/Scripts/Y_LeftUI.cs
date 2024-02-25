@@ -25,7 +25,8 @@ public class Y_LeftUI : MonoBehaviour
                 id = 1;
                 break;
             case 2:
-                Manager.Throwable = curTiles[1];
+                Manager.
+                    Throwable = curTiles[1];
                 id = 2;
                 break;
             case 3:

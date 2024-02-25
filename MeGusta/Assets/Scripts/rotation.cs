@@ -5,7 +5,7 @@ using UnityEngine;
 public class rotation : MonoBehaviour
 {
     [SerializeField] GameObject[] rotations= new GameObject[4];
-    int i = 0;
+    int count = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,22 +15,22 @@ public class rotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             Debug.Log("NEGAWHAT");
 
 
-            i++;
-            if (i>3)
+            count++;
+            if (count >3)
             {
-                i = 0;
+                count = 0;
             }
-            if (i<0)
+            if (count<0)
             {
-                i = 3;
+                count = 3;
             }
-            Manager.Throwable = rotations[i];
-            Debug.Log(i);
+            //Manager.Throwable = rotations[count];
+            Debug.Log(count);
         }
     }
 }
