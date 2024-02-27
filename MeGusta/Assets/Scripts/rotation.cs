@@ -29,7 +29,7 @@ public class rotation : MonoBehaviour
             {
                 count = 3;
             }
-            //Manager.Throwable = rotations[count];
+            Manager.Throwable = rotations[count];
             Debug.Log(count);
         }
     }

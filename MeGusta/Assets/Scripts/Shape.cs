@@ -35,10 +35,11 @@ public class Shape : MonoBehaviour
 	}
 	private void OnTriggerEnter2D(Collider2D other)//locks throwable to prefab
 	{
-		if (other.tag == "Background")
+        if (other.tag == "Background")
         {
-			firstColor= other.GetComponent<SpriteRenderer>().color;
-			other.GetComponent<SpriteRenderer>().color = Color.red;
+			////Color gridColor = new Color(25, 255, 0, 0.2605f);
+   //         firstColor = other.GetComponent<SpriteRenderer>().color;
+			//other.GetComponent<SpriteRenderer>().color = firstColor;
 		}
 
 		if (other.tag == "Wall")
@@ -79,7 +80,7 @@ public class Shape : MonoBehaviour
 	{
         if (other.tag == "Background")
         {
-			other.GetComponent<SpriteRenderer>().color = firstColor;
+			//other.GetComponent<SpriteRenderer>().color = firstColor;
 		}
 	}
     private void InputButBetter()
