@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class MovingGuy : MonoBehaviour
 {
 	[SerializeField] int PlayerSpeed = 5;
-	Vector3 Movement = new Vector3 (0, 0, 0);
+	Vector3 Movement = new Vector3(0, 0, 0);
 	[SerializeField] Sprite front;
-    [SerializeField] Sprite back;
-    [SerializeField] Sprite left;
-    [SerializeField] Sprite right;
+	[SerializeField] Sprite back;
+	[SerializeField] Sprite left;
+	[SerializeField] Sprite right;
 	[SerializeField] Sprite falling;
+	[SerializeField] GameObject Announcment;	
 	bool isFall = false;
 	bool didClick = false;
+	private void Start()
+	{
+		Announcment.GetComponent<TextMeshPro>().SetText("") ;
+	}
 	private void Update()
 	{
 		if (Input.GetKey(KeyCode.Mouse0))//see explanation below
@@ -49,6 +55,10 @@ public class MovingGuy : MonoBehaviour
     }
 	private void OnTriggerEnter2D(Collider2D other)
 	{
+		if (other.tag == "PickUpSlim") { Y_LeftUI.isSlimUnlocked = true; GetComponent<AudioSource>().Play(); Announcment.GetComponent<TextMeshPro>().SetText("Slim has unlocked!"); Destroy(other); }//SlimPickUP
+		if (other.tag == "PickUpSquare") { Y_LeftUI.isSquareUnlocked = true; GetComponent<AudioSource>().Play(); Announcment.GetComponent<TextMeshPro>().SetText("Square has unlocked!"); Destroy(other); }//Square PickUp
+		if (other.tag == "PickUpLShape") { Y_LeftUI.isLshapeUnlocked = true; GetComponent<AudioSource>().Play(); Announcment.GetComponent<TextMeshPro>().SetText("L Shape has unlocked!"); Destroy(other); }//L Shape PickUp
+		if (other.tag == "PickUp3") { Y_LeftUI.is3Unlocked = true; GetComponent<AudioSource>().Play(); Announcment.GetComponent<TextMeshPro>().SetText("si has unlocked!") ; Destroy(other); }	// i dont know what shape its gonna be tbh
 		if (other.tag != "Background")//diversified to 4 different tags in case we wanna mess with the usage of the "Used" tag
 		{
             if (gameObject.GetComponent<Renderer>().sortingLayerID != SortingLayer.NameToID("FALLING"))

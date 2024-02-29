@@ -11,6 +11,10 @@ public class Y_LeftUI : MonoBehaviour
     [SerializeField] public GameObject[] curTiles= new GameObject[4];
     public static GameObject curTile;
     public static int id;
+    public static bool isSquareUnlocked=false;
+    public static bool isLshapeUnlocked=false;
+    public static bool isSlimUnlocked=false;
+    public static bool is3Unlocked=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,21 +25,35 @@ public class Y_LeftUI : MonoBehaviour
         switch (selectorUI.value)
         {
             case 1:
-                Manager.Throwable = curTiles[0];
-                id = 1;
+                if (isSquareUnlocked)//checking if unlocked by second player(moving guy script is changing the value)
+                {
+					Manager.Throwable = curTiles[0];
+					id = 1;
+				}
+
                 break;
             case 2:
-                Manager.
-                    Throwable = curTiles[1];
-                id = 2;
+                if (isLshapeUnlocked)//checking if unlocked by second player(moving guy script is changing the value)
+				{
+					Manager.Throwable = curTiles[1];
+					id = 2;
+				}
+                
                 break;
             case 3:
-                Manager.Throwable = curTiles[2];
-                id = 3;
+                if (isSlimUnlocked)//checking if unlocked by second player(moving guy script is changing the value)
+				{
+					Manager.Throwable = curTiles[2];
+					id = 3;
+				}
+
                 break;
             case 4:
-                Manager.Throwable = curTiles[3];
-                id = 4;
+                if (is3Unlocked)//checking if unlocked by second player(moving guy script is changing the value)
+				{
+					Manager.Throwable = curTiles[3];
+					id = 4;
+				}
                 break;
         }
     }
