@@ -21,7 +21,7 @@ public class wind1 : MonoBehaviour
         if (timer + 3 < Time.deltaTime)
         {
             isWind = true;
-            GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity + new Vector2(-30, 0);
+            transform.Translate(new Vector2(-5, 0) * Time.deltaTime); 
             timer = Time.deltaTime;
             isWind = false;
         }
