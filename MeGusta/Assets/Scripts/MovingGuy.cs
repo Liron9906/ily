@@ -17,7 +17,7 @@ public class MovingGuy : MonoBehaviour
 	bool didClick = false;
 	private void Start()
 	{
-		Announcment.GetComponent<TextMeshPro>().SetText("") ;
+		Announcment.GetComponent<Text>().text = "" ;
 	}
 	private void Update()
 	{
@@ -55,10 +55,10 @@ public class MovingGuy : MonoBehaviour
     }
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.tag == "PickUpSlim") { Y_LeftUI.isSlimUnlocked = true; GetComponent<AudioSource>().Play(); Announcment.GetComponent<TextMeshPro>().SetText("Slim has unlocked!"); Destroy(other); }//SlimPickUP
-		if (other.tag == "PickUpSquare") { Y_LeftUI.isSquareUnlocked = true; GetComponent<AudioSource>().Play(); Announcment.GetComponent<TextMeshPro>().SetText("Square has unlocked!"); Destroy(other); }//Square PickUp
-		if (other.tag == "PickUpLShape") { Y_LeftUI.isLshapeUnlocked = true; GetComponent<AudioSource>().Play(); Announcment.GetComponent<TextMeshPro>().SetText("L Shape has unlocked!"); Destroy(other); }//L Shape PickUp
-		if (other.tag == "PickUp3") { Y_LeftUI.is3Unlocked = true; GetComponent<AudioSource>().Play(); Announcment.GetComponent<TextMeshPro>().SetText("si has unlocked!") ; Destroy(other); }	// i dont know what shape its gonna be tbh
+		if (other.tag == "PickUpSlim") { Y_LeftUI.isSlimUnlocked = true; GetComponent<AudioSource>().Play(); Announcment.GetComponent<Text>().text = "Slim has unlocked!"; Destroy(other); }//SlimPickUP
+		if (other.tag == "PickUpSquare") { Y_LeftUI.isSquareUnlocked = true; GetComponent<AudioSource>().Play(); Announcment.GetComponent<Text>().text = "Square has unlocked!"; Destroy(other); }//Square PickUp
+		if (other.tag == "PickUpLShape") { Y_LeftUI.isLshapeUnlocked = true; GetComponent<AudioSource>().Play(); Announcment.GetComponent<Text>().text="L Shape has unlocked!"; Destroy(other); }//L Shape PickUp
+		if (other.tag == "PickUpPlus") { Y_LeftUI.isPlusUnlocked = true; GetComponent<AudioSource>().Play(); Announcment.GetComponent<Text>().text = "Plus has unlocked!" ; Destroy(other); }	// i dont know what shape its gonna be tbh
 		if (other.tag != "Background")//diversified to 4 different tags in case we wanna mess with the usage of the "Used" tag
 		{
             if (gameObject.GetComponent<Renderer>().sortingLayerID != SortingLayer.NameToID("FALLING"))

@@ -14,7 +14,7 @@ public class Y_LeftUI : MonoBehaviour
     public static bool isSquareUnlocked=false;
     public static bool isLshapeUnlocked=false;
     public static bool isSlimUnlocked=false;
-    public static bool is3Unlocked=false;
+    public static bool isPlusUnlocked=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +49,7 @@ public class Y_LeftUI : MonoBehaviour
 
                 break;
             case 4:
-                if (is3Unlocked)//checking if unlocked by second player(moving guy script is changing the value)
+                if (isPlusUnlocked)//checking if unlocked by second player(moving guy script is changing the value)
 				{
 					Manager.Throwable = curTiles[3];
 					id = 4;
