@@ -17,7 +17,7 @@ public class MovingGuy : MonoBehaviour
 	bool didClick = false;
 	private void Start()
 	{
-		Announcment.GetComponent<Text>().text = "" ;
+		//Announcment.GetComponent<Text>().text = "" ;
 	}
 	private void Update()
 	{
