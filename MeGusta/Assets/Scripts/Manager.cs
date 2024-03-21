@@ -7,10 +7,12 @@ public class Manager : MonoBehaviour
 {
 	[SerializeField] GameObject endObj2;
 	[SerializeField] public static GameObject Throwable;
+	public int skillCheckCount;
     private void Update()
     {
 		//Throwable = Y_LeftUI.curTile;
 		//Debug.Log(Throwable);
+		skillCheckCount = skillCheck.countOfHits;
     }
     public void SpawnNewOne()
 	{

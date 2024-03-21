@@ -9,6 +9,12 @@ TagManager:
   - Background
   - start
   - UsedBackground
+  - Wall
+  - PickUpSquare
+  - good
+  - bad
+  - cage
+  - PickUpSlim
   layers:
   - Default
   - TransparentFX
