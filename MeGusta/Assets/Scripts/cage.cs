@@ -8,6 +8,7 @@ public class cage : MonoBehaviour
 {
     [SerializeField] GameObject skillCheck;
     [SerializeField] GameObject backGround;
+    bool once= true;
     
     private void Awake()
     {
@@ -22,7 +23,12 @@ public class cage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (once && Manager.destroyThatBitch)
+        {
+            StartCoroutine(fadeInAndOut(backGround, false, 3));
+            Destroy(backGround, 3.5f);
+            once = false;
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

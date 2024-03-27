@@ -9,12 +9,17 @@ public class Manager : MonoBehaviour
 	[SerializeField] public static GameObject Throwable;
 	public int skillCheckCount;
 	public static Vector3 throwableSpawnPoint = new Vector3(-8, -2, 10);
+	public static bool destroyThatBitch= false;
 
 	private void Update()
     {
 		//Throwable = Y_LeftUI.curTile;
 		//Debug.Log(Throwable);
 		skillCheckCount = skillCheck.countOfHits;
+		if (skillCheck.countOfHits == 3)
+		{
+			destroyThatBitch = true;
+		}
     }
 	private void Start()
 	{
