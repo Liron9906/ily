@@ -21,7 +21,7 @@ public class cage : MonoBehaviour
         if (other.tag == "Player")
         {
             GameObject SkillCHECK =
-            Instantiate(skillCheck, new Vector3(-8, -1, 10), Quaternion.identity) as GameObject;
+            Instantiate(skillCheck, new Vector3(0, 0, -9.9F), Quaternion.identity) as GameObject;
             SkillCHECK.SetActive(true);
         }
     }
