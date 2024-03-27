@@ -39,7 +39,7 @@ public class rotation : MonoBehaviour
     }
     private void BetterRotation()
     {
-        if (!Shape.IsLeftPressed)
+        if (!FindObjectOfType<Shape>().IsLeftPressed)
         {
             Destroy(Manager.Throwable);
             switch (Y_LeftUI.id)

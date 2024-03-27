@@ -16,7 +16,7 @@ public class Shape : MonoBehaviour
     bool go= false;
     bool pressed= false;
 
-	public static bool IsLeftPressed;
+	public bool IsLeftPressed=false;
     Color firstColor;
 	// Start is called before the first frame update
 	void Start()
@@ -96,7 +96,7 @@ public class Shape : MonoBehaviour
 			{
 				moveVector = (endObj.transform.position - transform.position).normalized;
 				pressed = false;
-				IsLeftPressed = false;
+				IsLeftPressed = true;
 
 				go = true;
 			}
