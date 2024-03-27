@@ -25,7 +25,7 @@ public class Y_LeftUI : MonoBehaviour
         switch (selectorUI.value)
         {
             case 1:
-                if (isSquareUnlocked)//checking if unlocked by second player(moving guy script is changing the value)
+                if (isSlimUnlocked)//checking if unlocked by second player(moving guy script is changing the value)
                 {
 					Manager.Throwable = curTiles[0];
 					id = 1;
@@ -41,7 +41,7 @@ public class Y_LeftUI : MonoBehaviour
                 
                 break;
             case 3:
-                if (isSlimUnlocked)//checking if unlocked by second player(moving guy script is changing the value)
+                if (isPlusUnlocked)//checking if unlocked by second player(moving guy script is changing the value)
 				{
 					Manager.Throwable = curTiles[2];
 					id = 3;
@@ -49,7 +49,7 @@ public class Y_LeftUI : MonoBehaviour
 
                 break;
             case 4:
-                if (isPlusUnlocked)//checking if unlocked by second player(moving guy script is changing the value)
+                if (isSquareUnlocked)//checking if unlocked by second player(moving guy script is changing the value)
 				{
 					Manager.Throwable = curTiles[3];
 					id = 4;

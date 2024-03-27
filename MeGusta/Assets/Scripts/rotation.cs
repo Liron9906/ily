@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class rotation : MonoBehaviour
 {
-    [SerializeField] GameObject[] rotations= new GameObject[4];
+    [SerializeField] GameObject[] lShapeRotations= new GameObject[4];
+    [SerializeField] GameObject[] slimRotations= new GameObject[4];
     int count = 0;
+    GameObject temp;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,8 +31,41 @@ public class rotation : MonoBehaviour
             {
                 count = 3;
             }
-            Manager.Throwable = rotations[count];
+            // Manager.Throwable = rotations[count];
+            BetterRotation();
             Debug.Log(count);
+
+        }
+    }
+    private void BetterRotation()
+    {
+        if (!Shape.IsLeftPressed)
+        {
+            Destroy(Manager.Throwable);
+            switch (Y_LeftUI.id)
+            {
+                case 0:
+                    temp= Instantiate(slimRotations[count], Manager.throwableSpawnPoint,Quaternion.identity) as GameObject;
+                    Manager.Throwable = temp;
+                    Manager.Throwable.SetActive(true);
+                    Debug.Log("I got here!");
+                    break;
+                case 1:
+                    temp = Instantiate(lShapeRotations[count], Manager.throwableSpawnPoint, Quaternion.identity) as GameObject;
+                    Manager.Throwable= temp;
+					Manager.Throwable.SetActive(true);
+
+					break;
+                case 2:
+                    break;
+                case 3:
+
+                    break;
+                default:
+					temp = Instantiate(lShapeRotations[count], Manager.throwableSpawnPoint, Quaternion.identity) as GameObject;
+					Manager.Throwable = temp;
+					break;
+            }
         }
     }
 }

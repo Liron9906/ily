@@ -8,13 +8,20 @@ public class Manager : MonoBehaviour
 	[SerializeField] GameObject endObj2;
 	[SerializeField] public static GameObject Throwable;
 	public int skillCheckCount;
-    private void Update()
+	public static Vector3 throwableSpawnPoint = new Vector3(-8, -2, 10);
+
+	private void Update()
     {
 		//Throwable = Y_LeftUI.curTile;
 		//Debug.Log(Throwable);
 		skillCheckCount = skillCheck.countOfHits;
     }
-    public void SpawnNewOne()
+	private void Start()
+	{
+		Throwable= FindObjectOfType<Y_LeftUI>().curTiles[0];
+		SpawnNewOne();
+	}
+	public void SpawnNewOne()
 	{
 		if (FindObjectOfType<endObj>().IsOnBorders)
 		{
@@ -28,7 +35,7 @@ public class Manager : MonoBehaviour
 		{
 
 			GameObject ThrowableGO =
-			Instantiate(Throwable, new Vector3(-8, -1, 10), Quaternion.identity) as GameObject;
+			Instantiate(Throwable, throwableSpawnPoint, Quaternion.identity) as GameObject;
 			ThrowableGO.SetActive(true);
 			Throwable = ThrowableGO;
 

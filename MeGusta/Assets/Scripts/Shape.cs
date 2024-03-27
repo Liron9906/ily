@@ -8,21 +8,22 @@ using UnityEngine.Rendering;
 public class Shape : MonoBehaviour
 {
 	//[SerializeField] GameObject shapeoosh;
-	public bool IsOnGrid = false;
-	public bool bopbopbopbopyesyesyesyes;
+
+	public bool isLockedOnGrid;
     [SerializeField] GameObject endObj;
     [SerializeField] float moveSpeed=5;
     Vector3 moveVector;
     bool go= false;
     bool pressed= false;
-    int lClickCounter= 0;
+
+	public static bool IsLeftPressed;
     Color firstColor;
 	// Start is called before the first frame update
 	void Start()
     {
         this.tag = "Throwable";
-        go = false;
-        bopbopbopbopyesyesyesyes = false;
+        this.go = false;
+        this.isLockedOnGrid = false;
 		FindObjectOfType<Manager>().FindMousePos();
     }
 	
@@ -37,17 +38,13 @@ public class Shape : MonoBehaviour
 	{
         if (other.tag == "Background")
         {
-			////Color gridColor = new Color(25, 255, 0, 0.2605f);
-   //         firstColor = other.GetComponent<SpriteRenderer>().color;
-			//other.GetComponent<SpriteRenderer>().color = firstColor;
+
 		}
 
 		if (other.tag == "Wall")
         {
 			FindObjectOfType<Manager>().SpawnNewOne();
 			Destroy(gameObject);
-
-
 		}
 		if (other.tag == "Background" && pressed == true)
         {
@@ -60,28 +57,26 @@ public class Shape : MonoBehaviour
             }
             else//if false
             {
-				this.IsOnGrid = true;
+				
                 other.GetComponent<L_PrefabScript>().SetIsOccupied();//sets it to true
-                this.tag = "Used";//changes the throwable tag to Used so it wont teleport like crazy between square(personal experience:)
 				FindObjectOfType<Manager>().SpawnNewOne();
-				this.GetComponent<Transform>().Translate(0, 0, 0);
-                this.GetComponent<Transform>().position = new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z - 1);
-                this.GetComponent<SpriteRenderer>().sortingOrder = other.GetComponent<SpriteRenderer>().sortingOrder;
-                //Debug.Log((this.transform.position.x, this.transform.position.y, this.transform.position.z - 1));
-                this.bopbopbopbopyesyesyesyes = true;
-                this.lClickCounter = 0;
-                //other.GetComponent<Transform>().position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1);
-                this.pressed = false;
 
-            }
+				this.tag = "Used";//changes the throwable tag to Used so it wont teleport like crazy between square(personal experience:)
+				this.GetComponent<Transform>().Translate(0, 0, 0);
+				this.GetComponent<Transform>().position = new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z - 1);
+				this.GetComponent<SpriteRenderer>().sortingOrder = other.GetComponent<SpriteRenderer>().sortingOrder;
+				//Debug.Log((this.transform.position.x, this.transform.position.y, this.transform.position.z - 1));
+				this.isLockedOnGrid = true;
+
+				//other.GetComponent<Transform>().position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1);
+				this.pressed = false;
+
+			}
         }
 	}
 	private void OnTriggerExit2D(Collider2D other)
 	{
-        if (other.tag == "Background")
-        {
-			//other.GetComponent<SpriteRenderer>().color = firstColor;
-		}
+
 	}
     private void InputButBetter()
     {
@@ -90,20 +85,22 @@ public class Shape : MonoBehaviour
 		{
 			//FindObjectOfType<L_PrefabScript>().pressed = true;
 			pressed = true;
+			IsLeftPressed = false;
 			//shapeoosh.layer = 0; //com
 
 		}
 		//Vector3 endPos = new Vector3(endObj.transform.position.x, endObj.transform.position.y, endObj.transform.position.z);    
 		if (Input.GetKeyDown(KeyCode.Mouse0))
 		{
-			if (lClickCounter == 0)
+			if (!IsLeftPressed)
 			{
 				moveVector = (endObj.transform.position - transform.position).normalized;
+				pressed = false;
+				IsLeftPressed = false;
 
+				go = true;
 			}
-			pressed = false;
-			lClickCounter++;
-			go = true;
+			
 		}
 	}
 
@@ -111,10 +108,10 @@ public class Shape : MonoBehaviour
 	{
 		if (go)
 		{
-			if (bopbopbopbopyesyesyesyes == false)
+			if (this.isLockedOnGrid == false)
 			{
 				transform.position += moveVector * moveSpeed * Time.deltaTime;
-				Debug.Log("aniHOMO");
+				
 
 			}
 			else
