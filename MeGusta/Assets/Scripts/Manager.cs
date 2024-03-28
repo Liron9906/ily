@@ -13,6 +13,8 @@ public class Manager : MonoBehaviour
 	public static bool destroyThatBitch= false;
     [SerializeField] Sprite openCage;
 	[SerializeField] GameObject Cage;
+	[SerializeField] GameObject finalDoor;
+    [SerializeField] GameObject finalDoorNew;
 
     private void Update()
     {
@@ -24,7 +26,8 @@ public class Manager : MonoBehaviour
 			destroyThatBitch = true;
 			Cage.GetComponent<SpriteRenderer>().sprite = openCage;
 			cage.isOver = true;
-		}
+			finalDoor.GetComponent<SpriteRenderer>().sprite = finalDoorNew.GetComponent<SpriteRenderer>().sprite;
+        }
     }
 	private void Start()
 	{
