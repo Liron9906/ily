@@ -3,41 +3,75 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.UI.Image;
 
 public class cage : MonoBehaviour
 {
-    [SerializeField] GameObject skillCheck;
+    [SerializeField] GameObject skillCheck1;
     [SerializeField] GameObject backGround;
     bool once= true;
-    
+    Color originalC;
+    public static bool isOver = false;
     private void Awake()
     {
+        originalC = backGround.GetComponent<SpriteRenderer>().color;
+        originalC.a = 1;
         //StartCoroutine(fadeInAndOut(backGround, false, 0));
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(WaitForFunction(true));
     }
-
     // Update is called once per frame
     void Update()
     {
+        if (!isOver)
+        {
+            if (skillCheck.colorTime == "HAPPY")
+            {
+                backGround.GetComponent<SpriteRenderer>().color = Color.green;
+                skillCheck.colorTime = "";
+                StartCoroutine(WaitForFunction(false));
+            }
+            else if (skillCheck.colorTime == "SAD")
+            {
+                backGround.GetComponent<SpriteRenderer>().color = Color.red;
+                skillCheck.colorTime = "";
+                StartCoroutine(WaitForFunction(false));
+            }
+            else
+            {
+                //this is the case where nothing is pressed :O
+            }
+        }
+        else
+        {
+            //its joever
+        }
         if (once && Manager.destroyThatBitch)
         {
-            StartCoroutine(fadeInAndOut(backGround, false, 3));
-            Destroy(backGround, 3.5f);
+            StartCoroutine(fadeInAndOut(backGround, false, 2));
+            Destroy(backGround, 2.5f);
             once = false;
         }
+
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && !isOver)
         {
             StartCoroutine(fadeInAndOut(backGround, true, 3));
             GameObject SkillCHECK =
-            Instantiate(skillCheck, new Vector3(0, 0, -9.9F), Quaternion.identity) as GameObject;
-            
+            Instantiate(skillCheck1, new Vector3(0, 0, -9.9F), Quaternion.identity) as GameObject;
+        }
+    }
+    IEnumerator WaitForFunction(bool test)
+    {
+        if (!test)
+        {
+            yield return new WaitForSeconds(0.5f);
+            backGround.GetComponent<SpriteRenderer>().color = originalC;
         }
     }
     public static IEnumerator fadeInAndOut(GameObject objectToFade, bool fadeIn, float duration)

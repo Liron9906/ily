@@ -284,7 +284,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9794421}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.738308, y: 0.25990716, z: 9.001042}
+  m_LocalPosition: {x: 28.738308, y: 0.39, z: 9.001042}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -673,10 +673,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db82c4bce5096d9479a67b58bd44671b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOnGrid: 0
-  bopbopbopbopyesyesyesyes: 0
+  isLockedOnGrid: 0
   endObj: {fileID: 1505275699}
   moveSpeed: 7
+  IsLeftPressed: 0
 --- !u!50 &67436976
 Rigidbody2D:
   serializedVersion: 4
@@ -6460,10 +6460,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db82c4bce5096d9479a67b58bd44671b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOnGrid: 0
-  bopbopbopbopyesyesyesyes: 0
+  isLockedOnGrid: 0
   endObj: {fileID: 1505275699}
   moveSpeed: 7
+  IsLeftPressed: 0
 --- !u!50 &337470426
 Rigidbody2D:
   serializedVersion: 4
@@ -6612,10 +6612,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db82c4bce5096d9479a67b58bd44671b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOnGrid: 0
-  bopbopbopbopyesyesyesyes: 0
+  isLockedOnGrid: 0
   endObj: {fileID: 1505275699}
   moveSpeed: 7
+  IsLeftPressed: 0
 --- !u!50 &343382539
 Rigidbody2D:
   serializedVersion: 4
@@ -7029,10 +7029,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db82c4bce5096d9479a67b58bd44671b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOnGrid: 0
-  bopbopbopbopyesyesyesyes: 0
+  isLockedOnGrid: 0
   endObj: {fileID: 1505275699}
   moveSpeed: 7
+  IsLeftPressed: 0
 --- !u!50 &422043181
 Rigidbody2D:
   serializedVersion: 4
@@ -7518,10 +7518,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db82c4bce5096d9479a67b58bd44671b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOnGrid: 0
-  bopbopbopbopyesyesyesyes: 0
+  isLockedOnGrid: 0
   endObj: {fileID: 1505275699}
   moveSpeed: 7
+  IsLeftPressed: 0
 --- !u!50 &506087893
 Rigidbody2D:
   serializedVersion: 4
@@ -7946,10 +7946,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db82c4bce5096d9479a67b58bd44671b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOnGrid: 0
-  bopbopbopbopyesyesyesyes: 0
+  isLockedOnGrid: 0
   endObj: {fileID: 1505275699}
   moveSpeed: 7
+  IsLeftPressed: 0
 --- !u!50 &523812780
 Rigidbody2D:
   serializedVersion: 4
@@ -8593,11 +8593,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b3906e3b70b30b4aac8b2168f96da1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotations:
-  - {fileID: 702887793}
-  - {fileID: 506087889}
-  - {fileID: 337470422}
-  - {fileID: 422043177}
+  lShapeRotations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  slimRotations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!61 &702887796
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8636,10 +8641,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db82c4bce5096d9479a67b58bd44671b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOnGrid: 0
-  bopbopbopbopyesyesyesyes: 0
+  isLockedOnGrid: 0
   endObj: {fileID: 1505275699}
   moveSpeed: 7
+  IsLeftPressed: 0
 --- !u!50 &702887798
 Rigidbody2D:
   serializedVersion: 4
@@ -8873,7 +8878,7 @@ SpriteRenderer:
   m_SortingLayerID: 307314959
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5e945da6714ff0c49ba30991325c714c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4de98092d73abe6478f17a98627ad0a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8892,7 +8897,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820027295}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.81, y: 1, z: 0}
+  m_LocalPosition: {x: -5.97, y: 1.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8911,7 +8916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce563e6ee5adfaf43a724cfe4a3677ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillCheck: {fileID: 6365457743400405082, guid: e3c41ea5cc4330c48bd03f0b24624864, type: 3}
+  skillCheck1: {fileID: 6365457743400405082, guid: e3c41ea5cc4330c48bd03f0b24624864, type: 3}
   backGround: {fileID: 9794421}
 --- !u!60 &820027299
 PolygonCollider2D:
@@ -8930,7 +8935,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.0618494, y: 3.0618494}
+    oldSize: {x: 5, y: 5}
     newSize: {x: 5, y: 5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -8938,15 +8943,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.0013928413, y: -1.3759382}
-      - {x: 1.1427646, y: -0.6806506}
-      - {x: 1.1360025, y: 0.7525903}
-      - {x: -0.014183044, y: 1.5272416}
-      - {x: -1.1599736, y: 0.804942}
-      - {x: -1.1323705, y: -0.68034065}
-    - []
-    - []
-    - []
+    - - {x: 0.066016674, y: -2.1174393}
+      - {x: 1.8337088, y: -1.3041856}
+      - {x: 1.793242, y: 0.4155444}
+      - {x: 0.036374092, y: 1.2239002}
+      - {x: -1.8340654, y: 0.40048683}
+      - {x: -1.7896104, y: -1.3207281}
   m_UseDelaunayMesh: 0
 --- !u!1 &882516893
 GameObject:
@@ -10445,11 +10447,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b3906e3b70b30b4aac8b2168f96da1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotations:
-  - {fileID: 1172253226}
-  - {fileID: 343382535}
-  - {fileID: 1172253226}
-  - {fileID: 343382535}
+  lShapeRotations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  slimRotations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!61 &1172253229
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10488,10 +10495,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db82c4bce5096d9479a67b58bd44671b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOnGrid: 0
-  bopbopbopbopyesyesyesyes: 0
+  isLockedOnGrid: 0
   endObj: {fileID: 1505275699}
   moveSpeed: 7
+  IsLeftPressed: 0
 --- !u!50 &1172253231
 Rigidbody2D:
   serializedVersion: 4
@@ -12390,6 +12397,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endObj2: {fileID: 1505275699}
   skillCheckCount: 0
+  openCage: {fileID: 21300000, guid: b693246f36f39c94eb9b29c93c49a097, type: 3}
+  Cage: {fileID: 820027295}
 --- !u!114 &1668057849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13470,10 +13479,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b3906e3b70b30b4aac8b2168f96da1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotations:
-  - {fileID: 1977394804}
+  lShapeRotations:
   - {fileID: 0}
-  - {fileID: 1977394804}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  slimRotations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
 --- !u!61 &1977394807
 BoxCollider2D:
@@ -13513,10 +13527,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db82c4bce5096d9479a67b58bd44671b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOnGrid: 0
-  bopbopbopbopyesyesyesyes: 0
+  isLockedOnGrid: 0
   endObj: {fileID: 1505275699}
   moveSpeed: 7
+  IsLeftPressed: 0
 --- !u!50 &1977394809
 Rigidbody2D:
   serializedVersion: 4
@@ -14568,7 +14582,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3635797825192292603}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.59, y: 0.28, z: 7.98442}
+  m_LocalPosition: {x: -5.57, y: 0.23, z: 7.98442}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14583,7 +14597,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3635797824587107950}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.96, y: -0.47, z: 7.98442}
+  m_LocalPosition: {x: -4.03, y: -0.47, z: 7.98442}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []

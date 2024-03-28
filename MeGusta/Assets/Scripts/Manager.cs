@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
@@ -10,8 +11,10 @@ public class Manager : MonoBehaviour
 	public int skillCheckCount;
 	public static Vector3 throwableSpawnPoint = new Vector3(-8, -2, 10);
 	public static bool destroyThatBitch= false;
+    [SerializeField] Sprite openCage;
+	[SerializeField] GameObject Cage;
 
-	private void Update()
+    private void Update()
     {
 		//Throwable = Y_LeftUI.curTile;
 		//Debug.Log(Throwable);
@@ -19,6 +22,8 @@ public class Manager : MonoBehaviour
 		if (skillCheck.countOfHits == 3)
 		{
 			destroyThatBitch = true;
+			Cage.GetComponent<SpriteRenderer>().sprite = openCage;
+			cage.isOver = true;
 		}
     }
 	private void Start()
