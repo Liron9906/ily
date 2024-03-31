@@ -56,10 +56,10 @@ public class MovingGuy : MonoBehaviour
     }
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.tag == "PickUpSlim") { Y_LeftUI.isSlimUnlocked = true; GetComponent<AudioSource>().Play(); announcment("Slim"); Destroy(other); }//SlimPickUP
-		if (other.tag == "PickUpSquare") { Y_LeftUI.isSquareUnlocked = true; GetComponent<AudioSource>().Play();announcment("Square") ; Destroy(other); }//Square PickUp
-		if (other.tag == "PickUpLShape") { Y_LeftUI.isLshapeUnlocked = true; GetComponent<AudioSource>().Play(); announcment("LShape") ; Destroy(other); }//L Shape PickUp
-		if (other.tag == "PickUpPlus") { Y_LeftUI.isPlusUnlocked = true; GetComponent<AudioSource>().Play(); announcment("Plus") ; Destroy(other); }	// i dont know what shape its gonna be tbh
+		if (other.tag == "PickUpSlim") { Y_LeftUI.isSlimUnlocked = true; /*GetComponent<AudioSource>().Play();*/ announcment("Slim"); Destroy(other); }//SlimPickUP
+		if (other.tag == "PickUpSquare") { Y_LeftUI.isSquareUnlocked = true; /*GetComponent<AudioSource>().Play();*/ announcment("Square") ; Destroy(other); }//Square PickUp
+		if (other.tag == "PickUpLShape") { Y_LeftUI.isLshapeUnlocked = true; /*GetComponent<AudioSource>().Play();*/ announcment("LShape") ; Destroy(other); }//L Shape PickUp
+		if (other.tag == "PickUpPlus") { Y_LeftUI.isPlusUnlocked = true; /*GetComponent<AudioSource>().Play();*/ announcment("Plus") ; Destroy(other); }	// i dont know what shape its gonna be tbh
 		if (other.tag != "Background")//diversified to 4 different tags in case we wanna mess with the usage of the "Used" tag
 		{
             if (gameObject.GetComponent<Renderer>().sortingLayerID != SortingLayer.NameToID("FALLING"))
@@ -83,7 +83,7 @@ public class MovingGuy : MonoBehaviour
 			gameObject.GetComponent<SpriteRenderer>().sprite = falling;
 			gameObject.GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("FALLING");//working sorting layer change
 			//gameObject.layer = LayerMask.NameToLayer("Background");
-			Debug.Log(gameObject.layer);
+			//Debug.Log(gameObject.layer);
 
         }
 		//Debug.Log(gameObject.layer);
