@@ -9990,7 +9990,7 @@ GameObject:
   - component: {fileID: 1053385817}
   m_Layer: 0
   m_Name: map bounds big
-  m_TagString: Background
+  m_TagString: bounds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14690,106 +14690,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!68 &3080954410761827242
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3635797824136730430}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 0.55022264, y: 0.5327224}
-  - {x: -0.0033886358, y: 0.1398089}
-  - {x: -0.5503987, y: 0.51495}
-  - {x: 0.0028331801, y: 1.0769107}
-  - {x: 0.55630803, y: 0.5582526}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
---- !u!68 &3080954410845508694
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3635797824222916802}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 0.55022264, y: 0.5327224}
-  - {x: -0.0033886358, y: 0.1398089}
-  - {x: -0.5503987, y: 0.51495}
-  - {x: 0.0028331801, y: 1.0769107}
-  - {x: 0.55630803, y: 0.5582526}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
---- !u!68 &3080954411217349370
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3635797824587107950}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 0.55022264, y: 0.5327224}
-  - {x: -0.0033886358, y: 0.1398089}
-  - {x: -0.5503987, y: 0.51495}
-  - {x: 0.0028331801, y: 1.0769107}
-  - {x: 0.55630803, y: 0.5582526}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
---- !u!68 &3080954411822224495
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3635797825192292603}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 0.55022264, y: 0.5327224}
-  - {x: -0.0033886358, y: 0.1398089}
-  - {x: -0.5503987, y: 0.51495}
-  - {x: 0.0028331801, y: 1.0769107}
-  - {x: 0.55630803, y: 0.5582526}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &3635797824136730430
 GameObject:
   m_ObjectHideFlags: 0
@@ -14800,7 +14700,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5305504814698288094}
   - component: {fileID: 270208534869293133}
-  - component: {fileID: 3080954410761827242}
   m_Layer: 7
   m_Name: tile1 (4)
   m_TagString: Untagged
@@ -14818,7 +14717,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5305504814644884514}
   - component: {fileID: 270208534817710001}
-  - component: {fileID: 3080954410845508694}
   m_Layer: 7
   m_Name: tile2 (4)
   m_TagString: Untagged
@@ -14836,7 +14734,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5305504814214318734}
   - component: {fileID: 270208535525089565}
-  - component: {fileID: 3080954411217349370}
   m_Layer: 7
   m_Name: tile2 (5)
   m_TagString: Untagged
@@ -14854,7 +14751,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5305504813608399899}
   - component: {fileID: 270208535996800904}
-  - component: {fileID: 3080954411822224495}
   m_Layer: 7
   m_Name: tile1 (5)
   m_TagString: Untagged

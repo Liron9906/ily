@@ -5335,7 +5335,7 @@ GameObject:
   - component: {fileID: 1438355273}
   m_Layer: 0
   m_Name: map bounds small
-  m_TagString: Background
+  m_TagString: bounds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

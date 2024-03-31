@@ -60,7 +60,7 @@ public class MovingGuy : MonoBehaviour
 		if (other.tag == "PickUpSquare") { Y_LeftUI.isSquareUnlocked = true; /*GetComponent<AudioSource>().Play();*/ announcment("Square") ; Destroy(other); }//Square PickUp
 		if (other.tag == "PickUpLShape") { Y_LeftUI.isLshapeUnlocked = true; /*GetComponent<AudioSource>().Play();*/ announcment("LShape") ; Destroy(other); }//L Shape PickUp
 		if (other.tag == "PickUpPlus") { Y_LeftUI.isPlusUnlocked = true; /*GetComponent<AudioSource>().Play();*/ announcment("Plus") ; Destroy(other); }	// i dont know what shape its gonna be tbh
-		if (other.tag != "Background")//diversified to 4 different tags in case we wanna mess with the usage of the "Used" tag
+		if (other.tag != "Background" && other.tag != "bounds")//diversified to 4 different tags in case we wanna mess with the usage of the "Used" tag
 		{
             if (gameObject.GetComponent<Renderer>().sortingLayerID != SortingLayer.NameToID("FALLING"))
             {
