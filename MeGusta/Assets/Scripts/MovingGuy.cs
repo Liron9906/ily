@@ -13,11 +13,17 @@ public class MovingGuy : MonoBehaviour
 	[SerializeField] Sprite left;
 	[SerializeField] Sprite right;
 	[SerializeField] Sprite falling;
-	[SerializeField] GameObject Announcment;	
+	[SerializeField] GameObject[] tilespictures;
+	Color[] ogcolor= new Color[4];
 	bool isFall = false;
 	bool didClick = false;
 	private void Start()
 	{
+		for (int i = 1; i < tilespictures.Length; i++)
+		{
+			ogcolor[i] = tilespictures[i].GetComponent<Image>().color;
+			tilespictures[i].GetComponent<Image>().color = Color.gray;
+		}
 		//Announcment.GetComponent<Text>().text = "" ;
 	}
 	private void Update()
@@ -56,10 +62,28 @@ public class MovingGuy : MonoBehaviour
     }
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.tag == "PickUpSlim") { Y_LeftUI.isSlimUnlocked = true; /*GetComponent<AudioSource>().Play();*/ announcment("Slim"); Destroy(other); }//SlimPickUP
-		if (other.tag == "PickUpSquare") { Y_LeftUI.isSquareUnlocked = true; /*GetComponent<AudioSource>().Play();*/ announcment("Square") ; Destroy(other); }//Square PickUp
-		if (other.tag == "PickUpLShape") { Y_LeftUI.isLshapeUnlocked = true; /*GetComponent<AudioSource>().Play();*/ announcment("LShape") ; Destroy(other); }//L Shape PickUp
-		if (other.tag == "PickUpPlus") { Y_LeftUI.isPlusUnlocked = true; /*GetComponent<AudioSource>().Play();*/ announcment("Plus") ; Destroy(other); }	// i dont know what shape its gonna be tbh
+		if (other.tag == "PickUpSlim") {
+			Y_LeftUI.isSlimUnlocked = true; 
+			announcment("Slim"); 
+			Destroy(other);
+		}//SlimPickUP
+		if (other.tag == "PickUpSquare")
+		{ 
+			Y_LeftUI.isSquareUnlocked = true; 
+			announcment("Square") ;
+			Destroy(other);
+		}//Square PickUp
+		if (other.tag == "PickUpLShape")
+		{ 
+			Y_LeftUI.isLshapeUnlocked = true;
+			announcment("LShape") ; 
+			Destroy(other); }//L Shape PickUp
+		if (other.tag == "PickUpPlus")
+		{ 
+			Y_LeftUI.isPlusUnlocked = true;
+			announcment("Plus") ;
+			Destroy(other); 
+		}	// i dont know what shape its gonna be tbh
 		if (other.tag != "Background" && other.tag != "bounds")//diversified to 4 different tags in case we wanna mess with the usage of the "Used" tag
 		{
             if (gameObject.GetComponent<Renderer>().sortingLayerID != SortingLayer.NameToID("FALLING"))
@@ -95,17 +119,28 @@ public class MovingGuy : MonoBehaviour
 		switch (shape)
 		{
 			case "LShape":
-				FindObjectOfType<Very_Text>().StartDialogue("L Shape has unlocked!");
+				FindObjectOfType<Very_Text>().StartDialogue("+3 L Shapes has UnLocked!");
+				FindObjectOfType<Manager>().TimesSpawned[1] = FindObjectOfType<Manager>().TimesSpawned[1] + 3;
+				tilespictures[1].GetComponent<Image>().color = ogcolor[1];
 				break;
 			case "Slim":
-				FindObjectOfType<Very_Text>().StartDialogue("slim has unlocked!");
+				FindObjectOfType<Very_Text>().StartDialogue("+3 slim has unlocked!");
+				FindObjectOfType<Manager>().TimesSpawned[0] = FindObjectOfType<Manager>().TimesSpawned[0] + 3;
+				tilespictures[0].SetActive(true);
 				break;
 			case "Square":
-				FindObjectOfType<Very_Text>().StartDialogue("Square has unlocked!");
+				FindObjectOfType<Very_Text>().StartDialogue("+1 Square has unlocked!");
+				FindObjectOfType<Manager>().TimesSpawned[2] = FindObjectOfType<Manager>().TimesSpawned[2] + 1;
+				tilespictures[2].GetComponent<Image>().color = ogcolor[2];
 				break;
 			case "Plus":
-				FindObjectOfType<Very_Text>().StartDialogue("Plus has unlocked!");
+				FindObjectOfType<Very_Text>().StartDialogue("+ 2 Plus has unlocked!");
+				FindObjectOfType<Manager>().TimesSpawned[3] = FindObjectOfType<Manager>().TimesSpawned[3] = 3;
+				tilespictures[3].GetComponent<Image>().color = ogcolor[3];
+
 				break;
 		}
+		GetComponent<AudioSource>().Play();
 	}
+	
 }

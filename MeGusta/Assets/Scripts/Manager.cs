@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
+	public int[] TimesSpawned = new int[4];//0- slim 1-L 2-plus 3-Square
+	[SerializeField] Text[] TextComponent= new Text[4];
+	
 	[SerializeField] GameObject endObj2;
 	[SerializeField] public static GameObject Throwable;
 	public int skillCheckCount;
@@ -31,27 +34,45 @@ public class Manager : MonoBehaviour
     }
 	private void Start()
 	{
+		TimesSpawned[0] = 5;
 		Throwable= FindObjectOfType<Y_LeftUI>().curTiles[0];
 		SpawnNewOne();
 	}
 	public void SpawnNewOne()
 	{
-		if (FindObjectOfType<endObj>().IsOnBorders)
+		Debug.Log(Y_LeftUI.id);
+		if (TimesSpawned[Y_LeftUI.id-1] > 0)
 		{
-			GameObject ThrowableGO =
-			Instantiate(Throwable, FindMousePos(), Quaternion.identity) as GameObject;
-			ThrowableGO.SetActive(true);
-			Throwable = ThrowableGO;
+			if (FindObjectOfType<endObj>().IsOnBorders)
+			{
+				GameObject ThrowableGO =
+				Instantiate(Throwable, FindMousePos(), Quaternion.identity) as GameObject;
+				Throwable = ThrowableGO;
+				ThrowableGO.SetActive(true);
+				
+			}
+			else
+			{
 
+				GameObject ThrowableGO =
+				Instantiate(Throwable, throwableSpawnPoint, Quaternion.identity) as GameObject;
+				Throwable = ThrowableGO;
+				ThrowableGO.SetActive(true);
+
+			}
+			TimesSpawned[Y_LeftUI.id - 1]--;
+			for (int i = 0; i < TimesSpawned.Length; i++)
+			{
+					
+			}
 		}
 		else
 		{
-
-			GameObject ThrowableGO =
-			Instantiate(Throwable, throwableSpawnPoint, Quaternion.identity) as GameObject;
-			ThrowableGO.SetActive(true);
-			Throwable = ThrowableGO;
-
+			if (isEmpty())
+			{
+				//FindObjectOfType<Very_Text>().StartDialogue("OUT OF TILES");
+				GetComponent<Very_Text>().StartDialogue("OUTOFTILES");
+			}
 		}
 	}
 	public Vector3 FindMousePos()
@@ -59,4 +80,16 @@ public class Manager : MonoBehaviour
 		Vector3 endPos = new Vector3(endObj2.transform.position.x, endObj2.transform.position.y, endObj2.transform.position.z);
 		return endPos;
 	}	
+	public bool isEmpty()
+	{
+		for (int i = 0; i < TimesSpawned.Length; i++)
+		{
+			if (TimesSpawned[i] > 0)
+			{
+				return false;
+			}
+
+		}
+		return true;
+	}
 }

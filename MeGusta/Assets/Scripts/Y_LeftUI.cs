@@ -10,7 +10,7 @@ public class Y_LeftUI : MonoBehaviour
     //[SerializeField] Scrollbar selectorUI;
     [SerializeField] public GameObject[] curTiles= new GameObject[4];
     public static GameObject curTile;
-    public static int id;
+    public static int id=1;
     public static bool isSquareUnlocked=false;
     public static bool isLshapeUnlocked=false;
     public static bool isSlimUnlocked=false;
@@ -51,6 +51,7 @@ public class Y_LeftUI : MonoBehaviour
             case 4:
                 if (isSquareUnlocked)//checking if unlocked by second player(moving guy script is changing the value)
 				{
+
 					Manager.Throwable = curTiles[3];
 					id = 4;
 				}

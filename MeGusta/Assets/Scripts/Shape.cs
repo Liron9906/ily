@@ -8,7 +8,7 @@ using UnityEngine.Rendering;
 public class Shape : MonoBehaviour
 {
 	//[SerializeField] GameObject shapeoosh;
-
+	
 	public bool isLockedOnGrid;
     [SerializeField] GameObject endObj;
     [SerializeField] float moveSpeed=5;
@@ -26,7 +26,10 @@ public class Shape : MonoBehaviour
         this.isLockedOnGrid = false;
 		FindObjectOfType<Manager>().FindMousePos();
     }
-	
+	private void Awake()
+	{
+		IsLeftPressed = false;
+	}
 	// Update is called once per frame
 	void Update()
     {
@@ -45,6 +48,8 @@ public class Shape : MonoBehaviour
         {
 			FindObjectOfType<Manager>().SpawnNewOne();
 			Destroy(gameObject);
+			IsLeftPressed = false;
+
 		}
 		if (other.tag == "Background" && pressed == true)
         {
