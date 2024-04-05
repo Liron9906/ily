@@ -4,6 +4,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System;
+
 public class MovingGuy : MonoBehaviour
 {
 	[SerializeField] int PlayerSpeed = 5;
@@ -13,17 +16,12 @@ public class MovingGuy : MonoBehaviour
 	[SerializeField] Sprite left;
 	[SerializeField] Sprite right;
 	[SerializeField] Sprite falling;
-	[SerializeField] GameObject[] tilespictures;
-	Color[] ogcolor= new Color[4];
 	bool isFall = false;
 	bool didClick = false;
+	public static bool didRestart;
 	private void Start()
 	{
-		for (int i = 1; i < tilespictures.Length; i++)
-		{
-			ogcolor[i] = tilespictures[i].GetComponent<Image>().color;
-			tilespictures[i].GetComponent<Image>().color = Color.gray;
-		}
+		
 		//Announcment.GetComponent<Text>().text = "" ;
 	}
 	private void Update()
@@ -121,26 +119,49 @@ public class MovingGuy : MonoBehaviour
 			case "LShape":
 				FindObjectOfType<Very_Text>().StartDialogue("+3 L Shapes has UnLocked!");
 				FindObjectOfType<Manager>().TimesSpawned[1] = FindObjectOfType<Manager>().TimesSpawned[1] + 3;
-				tilespictures[1].GetComponent<Image>().color = ogcolor[1];
+				
 				break;
 			case "Slim":
 				FindObjectOfType<Very_Text>().StartDialogue("+3 slim has unlocked!");
 				FindObjectOfType<Manager>().TimesSpawned[0] = FindObjectOfType<Manager>().TimesSpawned[0] + 3;
-				tilespictures[0].SetActive(true);
+				
 				break;
 			case "Square":
 				FindObjectOfType<Very_Text>().StartDialogue("+1 Square has unlocked!");
 				FindObjectOfType<Manager>().TimesSpawned[2] = FindObjectOfType<Manager>().TimesSpawned[2] + 1;
-				tilespictures[2].GetComponent<Image>().color = ogcolor[2];
+				
 				break;
 			case "Plus":
 				FindObjectOfType<Very_Text>().StartDialogue("+ 2 Plus has unlocked!");
 				FindObjectOfType<Manager>().TimesSpawned[3] = FindObjectOfType<Manager>().TimesSpawned[3] = 3;
-				tilespictures[3].GetComponent<Image>().color = ogcolor[3];
-
 				break;
 		}
 		GetComponent<AudioSource>().Play();
+		FindObjectOfType<Manager>().CountPrint();
+		FindObjectOfType<Manager>().ColorChange();
+
+
 	}
-	
+	public void RestartLevel()
+	{
+
+		//we need to wait 3 seconds and reload the scene- that ez <3
+		
+		//gameObject.GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("Player");
+		//transform.position= new Vector3(0,-4,0);
+		//isFall= false;
+		//didRestart= true;
+		//didRestart= false;
+		//for (int i = 0; i < FindObjectOfType<Manager>().TimesSpawned.Length; i++)
+		//{
+		//	FindObjectOfType<Manager>().TimesSpawned[i] = 0;
+		//}
+		//FindObjectOfType<Manager>().TimesSpawned[0] = FindObjectOfType<Manager>().baseNumOfTiles;
+		//FindObjectOfType<Manager>().SpawnNewOne();
+
+	}
+	public void SceneLoader(string sceneName)
+	{
+		SceneManager.LoadScene(sceneName);
+	}
 }

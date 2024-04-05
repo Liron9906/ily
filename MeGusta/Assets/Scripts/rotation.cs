@@ -41,19 +41,16 @@ public class rotation : MonoBehaviour
     {
         if (!FindObjectOfType<Shape>().IsLeftPressed)
         {
-            Destroy(Manager.Throwable);
-            switch (Y_LeftUI.id)
+          //  Destroy(Manager.Throwable);
+            switch (Y_LeftUI.id-1)
             {
                 case 0:
-                    temp= Instantiate(slimRotations[count], Manager.throwableSpawnPoint,Quaternion.identity) as GameObject;
-                    Manager.Throwable = temp;
-                    Manager.Throwable.SetActive(true);
+                    FindObjectOfType<Manager>().respawn(slimRotations[count]);
                     Debug.Log("I got here!");
                     break;
                 case 1:
-                    temp = Instantiate(lShapeRotations[count], Manager.throwableSpawnPoint, Quaternion.identity) as GameObject;
-                    Manager.Throwable= temp;
-					Manager.Throwable.SetActive(true);
+                    FindObjectOfType<Manager>().respawn(lShapeRotations[count]);
+
 
 					break;
                 case 2:
@@ -62,7 +59,7 @@ public class rotation : MonoBehaviour
 
                     break;
                 default:
-					temp = Instantiate(lShapeRotations[count], Manager.throwableSpawnPoint, Quaternion.identity) as GameObject;
+					temp = Instantiate(slimRotations[count], Manager.throwableSpawnPoint, Quaternion.identity) as GameObject;
 					Manager.Throwable = temp;
 					break;
             }

@@ -10,7 +10,7 @@ public class Very_Text : MonoBehaviour
 	[SerializeField] string[] anouncmentLines;
 	[SerializeField] Text textComponent;
 	[SerializeField] GameObject UIComponent;
-	[SerializeField] float textSpeed = 0.5f;
+	[SerializeField] float textSpeed = 0.01f;
 	int index;
 	float timer;
 	bool Called=false;

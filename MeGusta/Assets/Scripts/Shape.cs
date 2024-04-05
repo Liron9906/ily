@@ -35,7 +35,7 @@ public class Shape : MonoBehaviour
     {
 		MovetoMouseDir();
         InputButBetter();
-       
+
 	}
 	private void OnTriggerEnter2D(Collider2D other)//locks throwable to prefab
 	{
@@ -72,6 +72,7 @@ public class Shape : MonoBehaviour
 				this.GetComponent<SpriteRenderer>().sortingOrder = other.GetComponent<SpriteRenderer>().sortingOrder;
 				//Debug.Log((this.transform.position.x, this.transform.position.y, this.transform.position.z - 1));
 				this.isLockedOnGrid = true;
+				IsLeftPressed = false;
 
 				//other.GetComponent<Transform>().position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1);
 				this.pressed = false;
@@ -90,15 +91,18 @@ public class Shape : MonoBehaviour
 		{
 			//FindObjectOfType<L_PrefabScript>().pressed = true;
 			pressed = true;
-			IsLeftPressed = false;
 			//shapeoosh.layer = 0; //com
 
 		}
 		//Vector3 endPos = new Vector3(endObj.transform.position.x, endObj.transform.position.y, endObj.transform.position.z);    
 		if (Input.GetKeyDown(KeyCode.Mouse0))
 		{
-			if (!IsLeftPressed)
+			if (!IsLeftPressed&& !this.isLockedOnGrid)
 			{
+				FindObjectOfType<Manager>().TimesSpawned[Y_LeftUI.id - 1]--;
+				FindObjectOfType<Manager>().CountPrint();
+				FindObjectOfType<Manager>().ColorChange();
+
 				moveVector = (endObj.transform.position - transform.position).normalized;
 				pressed = false;
 				IsLeftPressed = true;
