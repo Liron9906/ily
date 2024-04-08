@@ -32,25 +32,25 @@ public class MovingGuy : MonoBehaviour
         }
         if (isFall == false)//locks movement when falling (visual shtick)
         {
-			if (Input.GetKey(KeyCode.UpArrow))
+			if (Input.GetKey(KeyCode.W))
 			{
 				Movement = new Vector2(0, PlayerSpeed);
 				transform.Translate(Movement * Time.deltaTime);
 				gameObject.GetComponent<SpriteRenderer>().sprite = back;
 			}
-			if (Input.GetKey(KeyCode.DownArrow))
+			if (Input.GetKey(KeyCode.S))
 			{
 				Movement = new Vector2(0, -PlayerSpeed);
 				transform.Translate(Movement * Time.deltaTime);
 				gameObject.GetComponent<SpriteRenderer>().sprite = front;
 			}
-			if (Input.GetKey(KeyCode.LeftArrow))
+			if (Input.GetKey(KeyCode.D))
 			{
 				Movement = new Vector2(-PlayerSpeed, 0);
 				transform.Translate(Movement * Time.deltaTime);
 				gameObject.GetComponent<SpriteRenderer>().sprite = left;
 			}
-			if (Input.GetKey(KeyCode.RightArrow))
+			if (Input.GetKey(KeyCode.A))
 			{
 				Movement = new Vector2(PlayerSpeed, 0);
 				transform.Translate(Movement * Time.deltaTime);

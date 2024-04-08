@@ -63,12 +63,12 @@ public class Y_LeftUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.O))
+        if (Input.GetKeyUp(KeyCode.UpArrow))
         {
             selectorUI.value -= 1;
             CurTileSwap();
         }
-        if (Input.GetKeyUp(KeyCode.L))
+        if (Input.GetKeyUp(KeyCode.DownArrow))
         {
             selectorUI.value += 1;
             CurTileSwap();
