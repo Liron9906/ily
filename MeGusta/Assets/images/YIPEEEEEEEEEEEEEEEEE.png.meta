@@ -1,0 +1,554 @@
+fileFormatVersion: 2
+guid: d0bea5eda2c708447b9335329fe4aa2a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: YIPEEEEEEEEEEEEEEEEE_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 83.5
+        width: 62.3
+        height: 83.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef100b6d90f862478b71306e4174871
+      internalID: 533910829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YIPEEEEEEEEEEEEEEEEE_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 83.5
+        width: 62.3
+        height: 83.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3faeaddb1496e684887567e534e758b7
+      internalID: 1096602717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YIPEEEEEEEEEEEEEEEEE_2
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 83.5
+        width: 62.3
+        height: 83.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b68abb0c7a9bb4140b2eef8f4ec4ad03
+      internalID: 1633865436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YIPEEEEEEEEEEEEEEEEE_3
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 83.5
+        width: 62.3
+        height: 83.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 237400ca0cf19fe4190bba978bedb8ea
+      internalID: 2006202127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YIPEEEEEEEEEEEEEEEEE_4
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 83.5
+        width: 62.3
+        height: 83.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db10689ea3f57843b96514ad0347c78
+      internalID: -240511609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YIPEEEEEEEEEEEEEEEEE_5
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 83.5
+        width: 62.3
+        height: 83.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044689157192df44cb0b8f168821eadc
+      internalID: -1283899293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YIPEEEEEEEEEEEEEEEEE_6
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 83.5
+        width: 62.3
+        height: 83.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f09f3f874b6d1d46a913a0ba8e8b7c3
+      internalID: -701973454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YIPEEEEEEEEEEEEEEEEE_7
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 83.5
+        width: 62.3
+        height: 83.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5fec73e12042cd43b1cd03cd8188c5b
+      internalID: 1002997727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YIPEEEEEEEEEEEEEEEEE_8
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 83.5
+        width: 62.3
+        height: 83.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c29f2e4674c2a4e945ff7ef6356726
+      internalID: 564770490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YIPEEEEEEEEEEEEEEEEE_9
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 83.5
+        width: 62.3
+        height: 83.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa65ff2b307857468ee3b409d5dcba1
+      internalID: -2058574718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YIPEEEEEEEEEEEEEEEEE_10
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0.5
+        width: 62.3
+        height: 83.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f373f8e95d36cf84bb925570d8f85241
+      internalID: -1737080676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YIPEEEEEEEEEEEEEEEEE_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0.5
+        width: 62.3
+        height: 83.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2eb565a4ca5a54581fc0d37eb7abd8
+      internalID: -1840412180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YIPEEEEEEEEEEEEEEEEE_12
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 0.5
+        width: 62.3
+        height: 83.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f48785b42621350498a91c1610d5782f
+      internalID: 551121941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YIPEEEEEEEEEEEEEEEEE_13
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 0.5
+        width: 62.3
+        height: 83.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1303f1bfd8d3e94bafeb271540429a6
+      internalID: 1287190931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YIPEEEEEEEEEEEEEEEEE_14
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0.5
+        width: 62.3
+        height: 83.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c40733907eda1784c9653ec67410f6a4
+      internalID: -1203048384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YIPEEEEEEEEEEEEEEEEE_15
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 0.5
+        width: 62.3
+        height: 83.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c521654570e4db641a7dff603e1a1379
+      internalID: 1121455573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YIPEEEEEEEEEEEEEEEEE_16
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 0.5
+        width: 62.3
+        height: 83.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c507260c252c8c94bb586edbd0db4236
+      internalID: -1336042188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YIPEEEEEEEEEEEEEEEEE_17
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 0.5
+        width: 62.3
+        height: 83.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1905ccbea4603e048ae95bd9199184e3
+      internalID: -244428618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YIPEEEEEEEEEEEEEEEEE_18
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 0.5
+        width: 62.3
+        height: 83.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c9403f645972da428c9cc96b3a90bb0
+      internalID: 838311425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      YIPEEEEEEEEEEEEEEEEE_16: -1336042188
+      YIPEEEEEEEEEEEEEEEEE_10: -1737080676
+      YIPEEEEEEEEEEEEEEEEE_8: 564770490
+      YIPEEEEEEEEEEEEEEEEE_0: 533910829
+      YIPEEEEEEEEEEEEEEEEE_1: 1096602717
+      YIPEEEEEEEEEEEEEEEEE_4: -240511609
+      YIPEEEEEEEEEEEEEEEEE_11: -1840412180
+      YIPEEEEEEEEEEEEEEEEE_7: 1002997727
+      YIPEEEEEEEEEEEEEEEEE_18: 838311425
+      YIPEEEEEEEEEEEEEEEEE_2: 1633865436
+      YIPEEEEEEEEEEEEEEEEE_15: 1121455573
+      YIPEEEEEEEEEEEEEEEEE_14: -1203048384
+      YIPEEEEEEEEEEEEEEEEE_12: 551121941
+      YIPEEEEEEEEEEEEEEEEE_13: 1287190931
+      YIPEEEEEEEEEEEEEEEEE_3: 2006202127
+      YIPEEEEEEEEEEEEEEEEE_6: -701973454
+      YIPEEEEEEEEEEEEEEEEE_5: -1283899293
+      YIPEEEEEEEEEEEEEEEEE_17: -244428618
+      YIPEEEEEEEEEEEEEEEEE_9: -2058574718
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
