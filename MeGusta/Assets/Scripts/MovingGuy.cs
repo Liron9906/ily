@@ -19,9 +19,11 @@ public class MovingGuy : MonoBehaviour
 	bool isFall = false;
 	bool didClick = false;
 	public static bool didRestart;
+	string thisSceneName;
 	private void Start()
 	{
-		
+		Scene sin = SceneManager.GetActiveScene();
+		 thisSceneName= sin.name;
 		//Announcment.GetComponent<Text>().text = "" ;
 	}
 	private void Update()
@@ -74,13 +76,15 @@ public class MovingGuy : MonoBehaviour
 		if (other.tag == "PickUpLShape")
 		{ 
 			Y_LeftUI.isLshapeUnlocked = true;
-			announcment("LShape") ; 
-			Destroy(other); }//L Shape PickUp
+			announcment("LShape"); 
+			Destroy(other);
+		}//L Shape PickUp
+
 		if (other.tag == "PickUpPlus")
 		{ 
 			Y_LeftUI.isPlusUnlocked = true;
 			announcment("Plus") ;
-			Destroy(other); 
+			Destroy (other);
 		}	// i dont know what shape its gonna be tbh
 		if (other.tag != "Background" && other.tag != "bounds")//diversified to 4 different tags in case we wanna mess with the usage of the "Used" tag
 		{
@@ -104,6 +108,7 @@ public class MovingGuy : MonoBehaviour
 			isFall = true;
 			gameObject.GetComponent<SpriteRenderer>().sprite = falling;
 			gameObject.GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("FALLING");//working sorting layer change
+			StartCoroutine(SceneLoader(FindObjectOfType<Manager>().thisSceneName, 3)) ;
 			//gameObject.layer = LayerMask.NameToLayer("Background");
 			//Debug.Log(gameObject.layer);
 
@@ -142,26 +147,10 @@ public class MovingGuy : MonoBehaviour
 
 
 	}
-	public void RestartLevel()
-	{
 
-		//we need to wait 3 seconds and reload the scene- that ez <3
-		
-		//gameObject.GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("Player");
-		//transform.position= new Vector3(0,-4,0);
-		//isFall= false;
-		//didRestart= true;
-		//didRestart= false;
-		//for (int i = 0; i < FindObjectOfType<Manager>().TimesSpawned.Length; i++)
-		//{
-		//	FindObjectOfType<Manager>().TimesSpawned[i] = 0;
-		//}
-		//FindObjectOfType<Manager>().TimesSpawned[0] = FindObjectOfType<Manager>().baseNumOfTiles;
-		//FindObjectOfType<Manager>().SpawnNewOne();
-
-	}
-	public void SceneLoader(string sceneName)
-	{
+	public static IEnumerator SceneLoader(string sceneName, float timeToWait)
+	{	
+		yield return new WaitForSeconds(timeToWait);
 		SceneManager.LoadScene(sceneName);
 	}
 }

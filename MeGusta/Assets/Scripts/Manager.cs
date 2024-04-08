@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
@@ -21,6 +22,8 @@ public class Manager : MonoBehaviour
 	[SerializeField] GameObject finalDoor;
     [SerializeField] GameObject finalDoorNew;
 	Color[] ogcolor = new Color[4];
+	public string thisSceneName;
+
 
 	private void Update()
     {
@@ -37,7 +40,8 @@ public class Manager : MonoBehaviour
     }
 	private void Start()
 	{
-		
+		Scene sin = SceneManager.GetActiveScene();
+		thisSceneName = sin.name;
 		for (int i = 0; i < tilespictures.Length; i++)
 		{
 			ogcolor[i] = tilespictures[i].GetComponent<Image>().color;
@@ -76,7 +80,8 @@ public class Manager : MonoBehaviour
 			{
 				//FindObjectOfType<Very_Text>().StartDialogue("OUT OF TILES");
 				GetComponent<Very_Text>().StartDialogue("OUTOFTILES");
-				FindObjectOfType<MovingGuy>().RestartLevel();
+				StartCoroutine( MovingGuy.SceneLoader(thisSceneName, 3));
+
 			}
 		}
 		CountPrint();
