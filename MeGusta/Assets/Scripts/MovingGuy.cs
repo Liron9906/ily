@@ -46,13 +46,13 @@ public class MovingGuy : MonoBehaviour
 				transform.Translate(Movement * Time.deltaTime);
 				gameObject.GetComponent<SpriteRenderer>().sprite = front;
 			}
-			if (Input.GetKey(KeyCode.D))
+			if (Input.GetKey(KeyCode.A))
 			{
 				Movement = new Vector2(-PlayerSpeed, 0);
 				transform.Translate(Movement * Time.deltaTime);
 				gameObject.GetComponent<SpriteRenderer>().sprite = left;
 			}
-			if (Input.GetKey(KeyCode.A))
+			if (Input.GetKey(KeyCode.D))
 			{
 				Movement = new Vector2(PlayerSpeed, 0);
 				transform.Translate(Movement * Time.deltaTime);
