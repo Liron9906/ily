@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class wind1 : MonoBehaviour
 {
+    [SerializeField] GameObject windThing;
     // Start is called before the first frame update
     bool wind = false;
     void Start()
@@ -17,6 +18,10 @@ public class wind1 : MonoBehaviour
         if (wind)
         {
             transform.Translate(new Vector3(-1, 0, 0)* Time.deltaTime);
+            GameObject windoosh =
+                Instantiate(windThing, new Vector2(0, 0), Quaternion.identity) as GameObject;
+            windoosh.GetComponent<Rigidbody2D>().velocity = new Vector2(-40,0)*Time.deltaTime;
+            Destroy(windoosh,1.5f);
         }
     }
     IEnumerator WeWINDING()
