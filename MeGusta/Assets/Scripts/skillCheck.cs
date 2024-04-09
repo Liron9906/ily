@@ -17,6 +17,8 @@ public class skillCheck : MonoBehaviour
     [SerializeField] GameObject square;
     [SerializeField] GameObject empty;
     [SerializeField] GameObject big;
+    [SerializeField] AudioClip good;
+    [SerializeField] AudioClip bad;
     private void Awake()
     {
         StartCoroutine(cage.fadeInAndOut(circle, true, 2));
@@ -42,6 +44,7 @@ public class skillCheck : MonoBehaviour
                 didHit = true;
                 countOfHits++;
                 colorTime = "HAPPY";
+                AudioSource.PlayClipAtPoint(good, Camera.main.transform.position);
                 //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
             else if (saveStat == "bad")
@@ -49,6 +52,7 @@ public class skillCheck : MonoBehaviour
                 didHit = true;
                 countOfHits = 0;
                 colorTime = "SAD";
+                AudioSource.PlayClipAtPoint(bad, Camera.main.transform.position);
                 //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
             //

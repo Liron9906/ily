@@ -21,6 +21,7 @@ public class Manager : MonoBehaviour
 	[SerializeField] GameObject Cage;
 	[SerializeField] GameObject finalDoor;
     [SerializeField] GameObject finalDoorNew;
+	[SerializeField] AudioClip doorSound;
 	Color[] ogcolor = new Color[4];
 	public string thisSceneName;
 
@@ -36,6 +37,7 @@ public class Manager : MonoBehaviour
 			Cage.GetComponent<SpriteRenderer>().sprite = openCage;
 			cage.isOver = true;
 			finalDoor.GetComponent<SpriteRenderer>().sprite = finalDoorNew.GetComponent<SpriteRenderer>().sprite;
+			AudioSource.PlayClipAtPoint(doorSound, Camera.main.transform.position);
         }
     }
 	private void Start()

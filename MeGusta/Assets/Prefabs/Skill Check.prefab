@@ -316,6 +316,8 @@ MonoBehaviour:
   square: {fileID: 6365457743586917188}
   empty: {fileID: 6365457743373250989}
   big: {fileID: 6365457745093061992}
+  good: {fileID: 8300000, guid: b188c8fad9085a24894518e53739a616, type: 3}
+  bad: {fileID: 8300000, guid: bd82a377b3c802f409355ff89d1f13f2, type: 3}
 --- !u!61 &6365457743586917247
 BoxCollider2D:
   m_ObjectHideFlags: 0

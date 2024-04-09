@@ -676,6 +676,8 @@ MonoBehaviour:
   isLockedOnGrid: 0
   endObj: {fileID: 1505275699}
   moveSpeed: 7
+  locked: {fileID: 8300000, guid: cefd60f89fa312f4b8bc150f45c57db0, type: 3}
+  launched: {fileID: 8300000, guid: 30ce835df6bb7b846ab7a7a61732cc0f, type: 3}
   IsLeftPressed: 0
 --- !u!50 &67436976
 Rigidbody2D:
@@ -6611,6 +6613,8 @@ MonoBehaviour:
   isLockedOnGrid: 0
   endObj: {fileID: 1505275699}
   moveSpeed: 7
+  locked: {fileID: 8300000, guid: cefd60f89fa312f4b8bc150f45c57db0, type: 3}
+  launched: {fileID: 8300000, guid: 30ce835df6bb7b846ab7a7a61732cc0f, type: 3}
   IsLeftPressed: 0
 --- !u!50 &337470426
 Rigidbody2D:
@@ -6763,6 +6767,8 @@ MonoBehaviour:
   isLockedOnGrid: 0
   endObj: {fileID: 1505275699}
   moveSpeed: 7
+  locked: {fileID: 8300000, guid: cefd60f89fa312f4b8bc150f45c57db0, type: 3}
+  launched: {fileID: 8300000, guid: 30ce835df6bb7b846ab7a7a61732cc0f, type: 3}
   IsLeftPressed: 0
 --- !u!50 &343382539
 Rigidbody2D:
@@ -7379,6 +7385,8 @@ MonoBehaviour:
   isLockedOnGrid: 0
   endObj: {fileID: 1505275699}
   moveSpeed: 7
+  locked: {fileID: 8300000, guid: cefd60f89fa312f4b8bc150f45c57db0, type: 3}
+  launched: {fileID: 8300000, guid: 30ce835df6bb7b846ab7a7a61732cc0f, type: 3}
   IsLeftPressed: 0
 --- !u!50 &422043181
 Rigidbody2D:
@@ -7872,6 +7880,8 @@ MonoBehaviour:
   isLockedOnGrid: 0
   endObj: {fileID: 1505275699}
   moveSpeed: 7
+  locked: {fileID: 8300000, guid: cefd60f89fa312f4b8bc150f45c57db0, type: 3}
+  launched: {fileID: 8300000, guid: 30ce835df6bb7b846ab7a7a61732cc0f, type: 3}
   IsLeftPressed: 0
 --- !u!50 &506087893
 Rigidbody2D:
@@ -8902,6 +8912,8 @@ MonoBehaviour:
   isLockedOnGrid: 0
   endObj: {fileID: 1505275699}
   moveSpeed: 7
+  locked: {fileID: 8300000, guid: cefd60f89fa312f4b8bc150f45c57db0, type: 3}
+  launched: {fileID: 8300000, guid: 30ce835df6bb7b846ab7a7a61732cc0f, type: 3}
   IsLeftPressed: 0
 --- !u!50 &702887798
 Rigidbody2D:
@@ -10933,6 +10945,8 @@ MonoBehaviour:
   isLockedOnGrid: 0
   endObj: {fileID: 1505275699}
   moveSpeed: 7
+  locked: {fileID: 8300000, guid: cefd60f89fa312f4b8bc150f45c57db0, type: 3}
+  launched: {fileID: 8300000, guid: 30ce835df6bb7b846ab7a7a61732cc0f, type: 3}
   IsLeftPressed: 0
 --- !u!50 &1172253231
 Rigidbody2D:
@@ -12782,7 +12796,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1613449379}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05, y: -4.02, z: 0}
+  m_LocalPosition: {x: -0.02, y: -4.08, z: 0}
   m_LocalScale: {x: 0.31502745, y: 0.27359706, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12799,7 +12813,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fec06f71f30137c4289a211d4cedab64, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 082c73d4f600ee24191085ac9e6f4cb3, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -13022,6 +13036,7 @@ MonoBehaviour:
   Cage: {fileID: 820027295}
   finalDoor: {fileID: 378112115}
   finalDoorNew: {fileID: 1831219590}
+  doorSound: {fileID: 8300000, guid: 59fff427bf7132143b3c5a7b928eae28, type: 3}
   thisSceneName: 
 --- !u!114 &1668057849
 MonoBehaviour:
@@ -14118,6 +14133,8 @@ MonoBehaviour:
   isLockedOnGrid: 0
   endObj: {fileID: 1505275699}
   moveSpeed: 7
+  locked: {fileID: 8300000, guid: cefd60f89fa312f4b8bc150f45c57db0, type: 3}
+  launched: {fileID: 8300000, guid: 30ce835df6bb7b846ab7a7a61732cc0f, type: 3}
   IsLeftPressed: 0
 --- !u!50 &1977394809
 Rigidbody2D:
