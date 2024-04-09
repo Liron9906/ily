@@ -16,6 +16,7 @@ public class MovingGuy : MonoBehaviour
 	[SerializeField] Sprite left;
 	[SerializeField] Sprite right;
 	[SerializeField] Sprite falling;
+	[SerializeField] int[] Pickedup= new int[4];//to know how many to add when pickup is picked up-0 sqq 1- p 2- L 3- Slim
 	bool isFall = false;
 	bool didClick = false;
 	private void Start()
@@ -134,23 +135,23 @@ public class MovingGuy : MonoBehaviour
 		switch (shape)
 		{
 			case "LShape":
-				FindObjectOfType<Very_Text>().StartDialogue("+3 L Shapes has UnLocked!");
-				FindObjectOfType<Manager>().TimesSpawned[2] = FindObjectOfType<Manager>().TimesSpawned[2] + 3;
+				FindObjectOfType<Very_Text>().StartDialogue($"{Pickedup[2]} Shapes has UnLocked!");
+				FindObjectOfType<Manager>().TimesSpawned[2] = FindObjectOfType<Manager>().TimesSpawned[2] + Pickedup[2];
 
 				break;
 			case "Slim":
-				FindObjectOfType<Very_Text>().StartDialogue("+3 slim has unlocked!");
-				FindObjectOfType<Manager>().TimesSpawned[3] = FindObjectOfType<Manager>().TimesSpawned[3] + 3;
+				FindObjectOfType<Very_Text>().StartDialogue($"{Pickedup[3]} slim has unlocked!");
+				FindObjectOfType<Manager>().TimesSpawned[3] = FindObjectOfType<Manager>().TimesSpawned[3] + Pickedup[3];
 
 				break;
 			case "Square":
-				FindObjectOfType<Very_Text>().StartDialogue("+1 Square has unlocked!");
-				FindObjectOfType<Manager>().TimesSpawned[0] = FindObjectOfType<Manager>().TimesSpawned[0] + 1;
+				FindObjectOfType<Very_Text>().StartDialogue($"{Pickedup[0]} Square has unlocked!");
+				FindObjectOfType<Manager>().TimesSpawned[0] = FindObjectOfType<Manager>().TimesSpawned[0] + Pickedup[0];
 
 				break;
 			case "Plus":
-				FindObjectOfType<Very_Text>().StartDialogue("+ 2 Plus has unlocked!");
-				FindObjectOfType<Manager>().TimesSpawned[1] = FindObjectOfType<Manager>().TimesSpawned[1] + 3;
+				FindObjectOfType<Very_Text>().StartDialogue($"{Pickedup[1]} Plus has unlocked!");
+				FindObjectOfType<Manager>().TimesSpawned[1] = FindObjectOfType<Manager>().TimesSpawned[1] + Pickedup[0];
 				break;
 		}
 		FindObjectOfType<Manager>().CountPrint();
@@ -161,7 +162,9 @@ public class MovingGuy : MonoBehaviour
 
 	public static IEnumerator SceneLoader(string sceneName, float timeToWait)
 	{
+		Debug.Log(Time.time);
 		yield return new WaitForSeconds(timeToWait);
+		Debug.Log(Time.time);
 		SceneManager.LoadScene(sceneName);
 	}
 }

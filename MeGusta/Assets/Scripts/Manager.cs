@@ -82,7 +82,7 @@ public class Manager : MonoBehaviour
 			{
 				//FindObjectOfType<Very_Text>().StartDialogue("OUT OF TILES");
 				GetComponent<Very_Text>().StartDialogue("OUTOFTILES");
-				StartCoroutine(waitandsee(4));
+				StartCoroutine( waitandsee());
 				
 			}
 		}
@@ -175,12 +175,14 @@ public class Manager : MonoBehaviour
 			Throwable = input;
 		}
 	}
-	IEnumerator waitandsee(float numOfSec)
+	IEnumerator waitandsee( )
 	{
-		yield return new WaitForSeconds(numOfSec);
+		yield return new WaitForSeconds(5);
 		if (isEmpty())
 		{
-			MovingGuy.SceneLoader(thisSceneName, 0);
+			Debug.Log("ij");
+
+			StartCoroutine (MovingGuy.SceneLoader(thisSceneName, 1));
 		}
 	}
 }
