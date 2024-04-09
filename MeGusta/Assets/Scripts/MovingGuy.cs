@@ -120,22 +120,22 @@ public class MovingGuy : MonoBehaviour
 		{
 			case "LShape":
 				FindObjectOfType<Very_Text>().StartDialogue("+3 L Shapes has UnLocked!");
-				FindObjectOfType<Manager>().TimesSpawned[1] = FindObjectOfType<Manager>().TimesSpawned[1] + 3;
+				FindObjectOfType<Manager>().TimesSpawned[2] = FindObjectOfType<Manager>().TimesSpawned[2] + 3;
 				
 				break;
 			case "Slim":
 				FindObjectOfType<Very_Text>().StartDialogue("+3 slim has unlocked!");
-				FindObjectOfType<Manager>().TimesSpawned[0] = FindObjectOfType<Manager>().TimesSpawned[0] + 3;
+				FindObjectOfType<Manager>().TimesSpawned[3] = FindObjectOfType<Manager>().TimesSpawned[3] + 3;
 				
 				break;
 			case "Square":
 				FindObjectOfType<Very_Text>().StartDialogue("+1 Square has unlocked!");
-				FindObjectOfType<Manager>().TimesSpawned[2] = FindObjectOfType<Manager>().TimesSpawned[2] + 1;
+				FindObjectOfType<Manager>().TimesSpawned[0] = FindObjectOfType<Manager>().TimesSpawned[0] + 1;
 				
 				break;
 			case "Plus":
 				FindObjectOfType<Very_Text>().StartDialogue("+ 2 Plus has unlocked!");
-				FindObjectOfType<Manager>().TimesSpawned[3] = FindObjectOfType<Manager>().TimesSpawned[3] = 3;
+				FindObjectOfType<Manager>().TimesSpawned[1] = FindObjectOfType<Manager>().TimesSpawned[1] + 3;
 				break;
 		}
 		GetComponent<AudioSource>().Play();

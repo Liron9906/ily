@@ -964,11 +964,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 109388050146655907, guid: 4c0fd74d53d69d0468901befe7b1f5a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.743511
+      value: -3.26
       objectReference: {fileID: 0}
     - target: {fileID: 109388050146655907, guid: 4c0fd74d53d69d0468901befe7b1f5a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.6
+      value: -1.67
       objectReference: {fileID: 0}
     - target: {fileID: 109388050146655907, guid: 4c0fd74d53d69d0468901befe7b1f5a6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3973,10 +3973,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimesSpawned: 00000000000000000000000000000000
   TextComponent:
-  - {fileID: 682217563}
-  - {fileID: 340943315}
-  - {fileID: 2112326802}
   - {fileID: 1611410792}
+  - {fileID: 2112326802}
+  - {fileID: 340943315}
+  - {fileID: 682217563}
   tilespictures:
   - {fileID: 841487204}
   - {fileID: 1238798942}
@@ -6995,11 +6995,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 109388050146655907, guid: f3cdcdd0bd11824418a5caf578733d93, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.1
+      value: 1.48
       objectReference: {fileID: 0}
     - target: {fileID: 109388050146655907, guid: f3cdcdd0bd11824418a5caf578733d93, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.9
+      value: -0.87
       objectReference: {fileID: 0}
     - target: {fileID: 109388050146655907, guid: f3cdcdd0bd11824418a5caf578733d93, type: 3}
       propertyPath: m_LocalPosition.z
