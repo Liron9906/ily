@@ -18,12 +18,9 @@ public class MovingGuy : MonoBehaviour
 	[SerializeField] Sprite falling;
 	bool isFall = false;
 	bool didClick = false;
-	public static bool didRestart;
-	string thisSceneName;
 	private void Start()
 	{
-		Scene sin = SceneManager.GetActiveScene();
-		 thisSceneName= sin.name;
+
 		//Announcment.GetComponent<Text>().text = "" ;
 	}
 	private void Update()
