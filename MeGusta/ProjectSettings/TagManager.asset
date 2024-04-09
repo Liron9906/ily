@@ -15,6 +15,9 @@ TagManager:
   - bad
   - cage
   - PickUpSlim
+  - bounds
+  - PickUpLShape
+  - donesies
   layers:
   - Default
   - TransparentFX
@@ -78,4 +81,7 @@ TagManager:
     locked: 0
   - name: SKILLCHECK
     uniqueID: 418657741
+    locked: 0
+  - name: donesies
+    uniqueID: 3293283327
     locked: 0

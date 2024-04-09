@@ -59,6 +59,14 @@ public class MovingGuy : MonoBehaviour
     }
 	private void OnTriggerEnter2D(Collider2D other)
 	{
+        if (other.tag == "donesies")
+        {
+			SceneManager.LoadScene("closing");
+        }
+		if (other.tag == "donez")
+		{
+			SceneManager.LoadScene("L2");
+		}
 		if (other.tag == "PickUpSlim") {
 			Y_LeftUI.isSlimUnlocked = true; 
 			announcment("Slim"); 
