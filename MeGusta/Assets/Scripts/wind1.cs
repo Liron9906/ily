@@ -5,24 +5,31 @@ using UnityEngine;
 public class wind1 : MonoBehaviour
 {
     [SerializeField] GameObject windThing;
+    System.Random rnd = new System.Random();
+    int count = 0;
     // Start is called before the first frame update
     bool wind = false;
     void Start()
     {
         StartCoroutine(WeWINDING());
     }
-
+    GameObject windoosh;
     // Update is called once per frame
     void Update()
     {
         if (wind)
         {
             transform.Translate(new Vector3(-1, 0, 0)* Time.deltaTime);
-            GameObject windoosh =
-                Instantiate(windThing, new Vector2(0, 0), Quaternion.identity) as GameObject;
-            windoosh.GetComponent<Rigidbody2D>().velocity = new Vector2(-40,0)*Time.deltaTime;
-            Destroy(windoosh,1.5f);
+            count++;
+            if (count==1)
+            {
+                 windoosh=
+                    Instantiate(windThing, new Vector2(12, -3), Quaternion.identity) as GameObject;
+                windoosh.SetActive(true);
+                Destroy(windoosh, 4);
+            }
         }
+        windoosh.transform.Translate(new Vector3(-20, 0, 0) * Time.deltaTime);
     }
     IEnumerator WeWINDING()
     {
@@ -33,7 +40,9 @@ public class wind1 : MonoBehaviour
             if (wind == false)
             {
                 yield return new WaitForSeconds(Random.Range(3, 10));//delay between gusts
+                count = 0;
             }
+            count = 0;
         }
     }
 }
