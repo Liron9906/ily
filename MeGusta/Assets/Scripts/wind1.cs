@@ -7,6 +7,7 @@ public class wind1 : MonoBehaviour
     [SerializeField] GameObject windThing;
     System.Random rnd = new System.Random();
     int count = 0;
+    bool isAlive = false;
     // Start is called before the first frame update
     bool wind = false;
     void Start()
@@ -26,10 +27,15 @@ public class wind1 : MonoBehaviour
                  windoosh=
                     Instantiate(windThing, new Vector2(12, -3), Quaternion.identity) as GameObject;
                 windoosh.SetActive(true);
-                Destroy(windoosh, 4);
+                isAlive = true;
+                Destroy(windoosh, 6);
+                delay();
             }
         }
-        windoosh.transform.Translate(new Vector3(-20, 0, 0) * Time.deltaTime);
+        if (isAlive)
+        {
+            windoosh.transform.Translate(new Vector3(-20, 0, 0) * Time.deltaTime);
+        }
     }
     IEnumerator WeWINDING()
     {
@@ -44,5 +50,10 @@ public class wind1 : MonoBehaviour
             }
             count = 0;
         }
+    }
+    IEnumerator delay()
+    {
+        yield return new WaitForSeconds(4);
+        isAlive= false;
     }
 }
