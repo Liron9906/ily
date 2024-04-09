@@ -29,7 +29,7 @@ public class wind1 : MonoBehaviour
                 windoosh.SetActive(true);
                 isAlive = true;
                 Destroy(windoosh, 6);
-                delay();
+                StartCoroutine(delay());
             }
         }
         if (isAlive)
