@@ -15,7 +15,8 @@ public class Shape : MonoBehaviour
     Vector3 moveVector;
     bool go= false;
     bool pressed= false;
-
+	[SerializeField] AudioClip locked;
+	[SerializeField] AudioClip launched;
 	public bool IsLeftPressed=false;
     Color firstColor;
 	// Start is called before the first frame update
@@ -62,10 +63,9 @@ public class Shape : MonoBehaviour
             }
             else//if false
             {
-				
-                other.GetComponent<L_PrefabScript>().SetIsOccupied();//sets it to true
+				AudioSource.PlayClipAtPoint(locked, Camera.main.transform.position);
+				other.GetComponent<L_PrefabScript>().SetIsOccupied();//sets it to true
 				FindObjectOfType<Manager>().SpawnNewOne();
-
 				this.tag = "Used";//changes the throwable tag to Used so it wont teleport like crazy between square(personal experience:)
 				this.GetComponent<Transform>().Translate(0, 0, 0);
 				this.GetComponent<Transform>().position = new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z - 1);
@@ -120,7 +120,7 @@ public class Shape : MonoBehaviour
 			if (this.isLockedOnGrid == false)
 			{
 				transform.position += moveVector * moveSpeed * Time.deltaTime;
-				
+				AudioSource.PlayClipAtPoint(launched, new Vector2(0,0));
 
 			}
 			else

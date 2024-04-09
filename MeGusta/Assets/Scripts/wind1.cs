@@ -20,6 +20,7 @@ public class wind1 : MonoBehaviour
     {
         if (wind)
         {
+            GetComponent<AudioSource>().Play();
             transform.Translate(new Vector3(-1, 0, 0)* Time.deltaTime);
             count++;
             if (count==1)
