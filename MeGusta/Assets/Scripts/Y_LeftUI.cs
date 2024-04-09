@@ -11,9 +11,9 @@ public class Y_LeftUI : MonoBehaviour
     [SerializeField] public GameObject[] curTiles= new GameObject[4];
     public static GameObject curTile;
     public static int id=1;
-    public static bool isSquareUnlocked=false;
+    public static bool isSquareUnlocked=true;
     public static bool isLshapeUnlocked=false;
-    public static bool isSlimUnlocked=true;
+    public static bool isSlimUnlocked=false;
     public static bool isPlusUnlocked=false;
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class Y_LeftUI : MonoBehaviour
         switch (selectorUI.value)
         {
             case 1:
-                if (isSlimUnlocked)//checking if unlocked by second player(moving guy script is changing the value)
+                if (isSquareUnlocked)//checking if unlocked by second player(moving guy script is changing the value)
                 {
                     FindObjectOfType<Manager>().respawn(curTiles[0]);
 					id = 1;
@@ -34,7 +34,7 @@ public class Y_LeftUI : MonoBehaviour
 
                 break;
             case 2:
-                if (isLshapeUnlocked)//checking if unlocked by second player(moving guy script is changing the value)
+                if (isPlusUnlocked)//checking if unlocked by second player(moving guy script is changing the value)
 				{
 					FindObjectOfType<Manager>().respawn(curTiles[1]);
 					id = 2;
@@ -42,7 +42,7 @@ public class Y_LeftUI : MonoBehaviour
                 
                 break;
             case 3:
-                if (isPlusUnlocked)//checking if unlocked by second player(moving guy script is changing the value)
+                if (isLshapeUnlocked)//checking if unlocked by second player(moving guy script is changing the value)
 				{
                     FindObjectOfType<Manager>().respawn(curTiles[2]);
 					id = 3;
@@ -50,7 +50,7 @@ public class Y_LeftUI : MonoBehaviour
 
                 break;
             case 4:
-                if (isSquareUnlocked)//checking if unlocked by second player(moving guy script is changing the value)
+                if (isSlimUnlocked)//checking if unlocked by second player(moving guy script is changing the value)
 				{
                     
                     FindObjectOfType<Manager>().respawn(curTiles[3]);

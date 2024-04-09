@@ -44,23 +44,14 @@ public class rotation : MonoBehaviour
           //  Destroy(Manager.Throwable);
             switch (Y_LeftUI.id-1)
             {
-                case 0:
+                case 3:
                     FindObjectOfType<Manager>().respawn(slimRotations[count]);
                     Debug.Log("I got here!");
                     break;
-                case 1:
-                    FindObjectOfType<Manager>().respawn(lShapeRotations[count]);
-
-
-					break;
                 case 2:
-                    break;
-                case 3:
-
+                    FindObjectOfType<Manager>().respawn(lShapeRotations[count]);
                     break;
                 default:
-					temp = Instantiate(slimRotations[count], Manager.throwableSpawnPoint, Quaternion.identity) as GameObject;
-					Manager.Throwable = temp;
 					break;
             }
         }

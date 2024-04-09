@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
-	public int[] TimesSpawned = new int[4];//0- slim 1-L 2-plus 3-Square
+	public int[] TimesSpawned = new int[4];//0- square 1-plus 2-L 3-Slim
 	[SerializeField] Text[] TextComponent= new Text[4];
 	[SerializeField] GameObject[] tilespictures;
 
@@ -82,8 +82,8 @@ public class Manager : MonoBehaviour
 			{
 				//FindObjectOfType<Very_Text>().StartDialogue("OUT OF TILES");
 				GetComponent<Very_Text>().StartDialogue("OUTOFTILES");
-				StartCoroutine( MovingGuy.SceneLoader(thisSceneName, 3));
-
+				StartCoroutine(waitandsee(4));
+				
 			}
 		}
 		CountPrint();
@@ -161,7 +161,10 @@ public class Manager : MonoBehaviour
 		if (!FindObjectOfType<Shape>().IsLeftPressed)//if left click isnt pressed
 		{
 			GameObject temp;
-			Destroy(Throwable);
+			if (!Throwable.GetComponent<Shape>().isLockedOnGrid)
+			{
+				Destroy(Throwable);
+			}
 			temp = Instantiate(input, throwableSpawnPoint, Quaternion.identity) as GameObject;
 			Throwable = temp;
 			Throwable.SetActive(true);
@@ -170,6 +173,14 @@ public class Manager : MonoBehaviour
 		else
 		{
 			Throwable = input;
+		}
+	}
+	IEnumerator waitandsee(float numOfSec)
+	{
+		yield return new WaitForSeconds(numOfSec);
+		if (isEmpty())
+		{
+			MovingGuy.SceneLoader(thisSceneName, 0);
 		}
 	}
 }
