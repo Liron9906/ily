@@ -13088,17 +13088,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimesSpawned: 00000000000000000000000000000000
   TextComponent:
-  - {fileID: 1556544098}
-  - {fileID: 2042986959}
-  - {fileID: 542453814}
   - {fileID: 1824004689}
+  - {fileID: 542453814}
+  - {fileID: 2042986959}
+  - {fileID: 1556544098}
   tilespictures:
-  - {fileID: 1062398260}
-  - {fileID: 1791915270}
-  - {fileID: 249982436}
   - {fileID: 1521591176}
+  - {fileID: 249982436}
+  - {fileID: 1791915270}
+  - {fileID: 1062398260}
   endObj2: {fileID: 1505275699}
-  baseNumOfTiles: 3
+  baseNumOfTiles: 5
   skillCheckCount: 0
   openCage: {fileID: 21300000, guid: b693246f36f39c94eb9b29c93c49a097, type: 3}
   Cage: {fileID: 820027295}
