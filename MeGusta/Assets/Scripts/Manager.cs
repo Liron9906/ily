@@ -42,8 +42,10 @@ public class Manager : MonoBehaviour
     }
 	private void Start()
 	{
+
 		Scene sin = SceneManager.GetActiveScene();
 		thisSceneName = sin.name;
+		
 		for (int i = 0; i < tilespictures.Length; i++)
 		{
 			ogcolor[i] = tilespictures[i].GetComponent<Image>().color;

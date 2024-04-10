@@ -12855,7 +12855,7 @@ MonoBehaviour:
   left: {fileID: -919555632, guid: 1b103395ca61ec34aa844b106e8e5e34, type: 3}
   right: {fileID: 1186878535, guid: 1b103395ca61ec34aa844b106e8e5e34, type: 3}
   falling: {fileID: 318331166, guid: 1b103395ca61ec34aa844b106e8e5e34, type: 3}
-  Pickedup: 00000000000000000000000000000000
+  Pickedup: 00000000000000000200000003000000
 --- !u!4 &1613449385
 Transform:
   m_ObjectHideFlags: 0

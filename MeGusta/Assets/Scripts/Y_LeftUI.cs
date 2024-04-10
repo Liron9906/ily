@@ -11,10 +11,10 @@ public class Y_LeftUI : MonoBehaviour
     [SerializeField] public GameObject[] curTiles= new GameObject[4];
     public static GameObject curTile;
     public static int id=1;
-    public static bool isSquareUnlocked=true;
-    public static bool isLshapeUnlocked=false;
-    public static bool isSlimUnlocked=false;
-    public static bool isPlusUnlocked=false;
+    public  bool isSquareUnlocked=true;
+    public  bool isLshapeUnlocked=false;
+    public  bool isSlimUnlocked=false;
+    public  bool isPlusUnlocked=false;
     // Start is called before the first frame update
     void Start()
     {

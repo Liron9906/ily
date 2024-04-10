@@ -76,26 +76,26 @@ public class MovingGuy : MonoBehaviour
 		}
 		if (other.tag == "PickUpSlim")
 		{
-			Y_LeftUI.isSlimUnlocked = true;
+			FindObjectOfType< Y_LeftUI>().isSlimUnlocked = true;
 			announcment("Slim");
 			Destroy(other);
 		}//SlimPickUP
 		if (other.tag == "PickUpSquare")
 		{
-			Y_LeftUI.isSquareUnlocked = true;
+            FindObjectOfType<Y_LeftUI>().isSquareUnlocked = true;
 			announcment("Square");
 			Destroy(other);
 		}//Square PickUp
 		if (other.tag == "PickUpLShape")
 		{
-			Y_LeftUI.isLshapeUnlocked = true;
+            FindObjectOfType<Y_LeftUI>().isLshapeUnlocked = true;
 			announcment("LShape");
 			Destroy(other);
 		}//L Shape PickUp
 
 		if (other.tag == "PickUpPlus")
 		{
-			Y_LeftUI.isPlusUnlocked = true;
+            FindObjectOfType<Y_LeftUI>().isPlusUnlocked = true;
 			announcment("Plus");
 			Destroy(other);
 		}   // i dont know what shape its gonna be tbh
