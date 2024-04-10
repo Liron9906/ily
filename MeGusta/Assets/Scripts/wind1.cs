@@ -8,6 +8,7 @@ public class wind1 : MonoBehaviour
     System.Random rnd = new System.Random();
     int count = 0;
     bool isAlive = false;
+    [SerializeField] AudioClip windSound;
     // Start is called before the first frame update
     bool wind = false;
     void Start()
@@ -20,7 +21,6 @@ public class wind1 : MonoBehaviour
     {
         if (wind)
         {
-            GetComponent<AudioSource>().Play();
             transform.Translate(new Vector3(-1, 0, 0)* Time.deltaTime);
             count++;
             if (count==1)
@@ -29,6 +29,7 @@ public class wind1 : MonoBehaviour
                     Instantiate(windThing, new Vector2(12, -3), Quaternion.identity) as GameObject;
                 windoosh.SetActive(true);
                 isAlive = true;
+                AudioSource.PlayClipAtPoint(windSound, Camera.main.transform.position);
                 Destroy(windoosh, 6);
                 StartCoroutine(delay());
             }
